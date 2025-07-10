@@ -37,8 +37,7 @@ const Footer = () => {
         </div>
 
         <div className="grid sm:grid-cols-2 gap-10 text-sm text-gray-300">
-          {/* 
-          <div className="space-y-4"> */}
+          
           <div>
             <p className="font-semibold">Contact Us</p>
             <p className="text-[28px] text-white">(+1 891 989-11-9)</p>
@@ -59,9 +58,6 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* </div> */}
-          {/* 
-          <div className="space-y-4"> */}
           <div >
             <p className="mb-2 text-[12px]  font-normal">Location</p>
             <p className="text-[#9F9F9F] text-[14px] font-normal">1700 New Jersey Ave NW</p>
@@ -74,8 +70,6 @@ const Footer = () => {
             <p className="text-[#9F9F9F] text-[14px] font-normal">email@gmail.com</p>
           </div>
 
-          {/*           
-          </div> */}
           <div>
             <p className="font-semibold">Mo—Fr</p>
             <p className="text-[#9F9F9F] text-[28px] font-normal">
@@ -83,20 +77,21 @@ const Footer = () => {
               <span className="text-gray-400">(Next day)</span>
             </p>
           </div>
-        </div>
+         </div>
 
       </div>
 
-      <div className="flex flex-col md:flex-row justify-between items-center gap-4 pt-6 pb-12 text-sm text-white ">
+      <div className="flex flex-col md:flex-row justify-between items-center gap-4 pt-6 pb-12 text-sm text-[#FFFDF4] ">
         <button
-          className="border border-white p-2 rounded-full hover:bg-gray-800 transition"
+          className="border border-white p-2 rounded-full transition"
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
         >
           <FaArrowUp />
         </button>
 
-        <p>© 2025 — Copyright</p>
+        <p className="text-[12px] text-[#FFFDF4]">© 2025 — Copyright</p>
       </div>
+      
 
       <div className="bg-[#080808] p-4 md:p-6">
         <div className="rounded-lg w-full py-8 px-6 grid grid-cols-2 items-center">

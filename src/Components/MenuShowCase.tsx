@@ -1,4 +1,4 @@
-import React from "react";
+
 import { FaStar, FaArrowRight } from "react-icons/fa";
 
 const dishes = [

@@ -3,9 +3,9 @@ import { FaRegCirclePlay } from "react-icons/fa6";
 
 const SecureSpot = () => {
   return (
-    
+
   <section
-  className="relative bg-cover bg-center h-screen"
+  className="relative bg-cover bg-center lg:py-[120px] py-[40px]"
   style={{
     backgroundImage: "url('../secure-spot.png')",
     backgroundRepeat: "no-repeat",
@@ -16,9 +16,9 @@ const SecureSpot = () => {
   <div className="absolute top-0 left-0 w-full h-full bg-black/10"></div>
 
   <div className="relative flex items-center justify-center h-full max-w-5xl mx-auto px-4">
-    <div className="grid md:grid-cols-2 bg-black/60 p-8 text-white rounded-tl-[80px] rounded-tr-[5px] rounded-br-[80px] rounded-bl-[5px] border border-white overflow-hidden">
+    <div className="grid grid-cols-1 md:grid-cols-2 bg-black/60 p-8 text-white rounded-tl-[80px] rounded-tr-[5px] rounded-br-[80px] rounded-bl-[5px] border border-white overflow-hidden">
 
-      <div className="space-y-6 border-r border-[border: 3px solid #CFC39B] p-8">
+      <div className="space-y-6 border-r-0 lg:border-r md:border-r sm:border-[#CFC39B]  p-8  ">
         <div >
           <h2 className="text-[36px] font-medium text-[#FFFDF4]">Secure Your Spot</h2>
           <p className="text-sm mt-2 text-[#9F9F9F] text-[16px] font-normal">Welcome to Our Reservation Page</p>
@@ -105,6 +105,7 @@ const SecureSpot = () => {
       </div>
     </div>
   </div>
+
 </section>
 
 
