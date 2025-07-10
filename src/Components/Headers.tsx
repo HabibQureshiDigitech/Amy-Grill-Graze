@@ -1,12 +1,15 @@
 
 import videoo from "/video/Home1.mp4";
 import logoo from "/logo.png";
-import Frame from "/Frame.png";
 import profile from "/profileSction1.png";
-import { FaSearch, FaBars } from "react-icons/fa";
 import { MdDoubleArrow } from "react-icons/md";
+import NavbarLinks from "./NavbarLinks";
 
 const Headers = () => {
+
+
+
+
   return (
     <section className="relative w-full min-h-screen overflow-hidden font-serif text-white">
       {/* Background Video */}
@@ -21,26 +24,12 @@ const Headers = () => {
       <div className="absolute inset-y-0 left-0 w-full md:w-1/2 bg-[#0e0c0b]/80 z-10" />
 
       {/* Navbar */}
-      <nav className="relative z-20 flex items-center justify-between px-6 md:px-8 py-5 max-w-7xl mx-auto">
-        <div>
-          <img src={Frame} alt="logo" className="h-10 md:h-12" />
-        </div>
+      
 
-        <ul className="hidden md:flex space-x-10 text-sm tracking-wide">
-          <li className="hover:text-yellow-300 cursor-pointer">Home</li>
-          <li className="hover:text-yellow-300 cursor-pointer">Menu</li>
-          <li className="hover:text-yellow-300 cursor-pointer">About</li>
-          <li className="hover:text-yellow-300 cursor-pointer">Reservation</li>
-        </ul>
+        <NavbarLinks />
 
-        <div className="flex items-center gap-4">
-          <button className="border border-white text-xs px-4 py-1 rounded-full hover:bg-white hover:text-black transition">
-            Contact Us
-          </button>
-          <FaSearch className="text-white text-sm cursor-pointer" />
-          <FaBars className="text-white text-sm cursor-pointer md:hidden" />
-        </div>
-      </nav>
+        
+      
 
       {/* Main Content */}
       <div className="relative z-20 max-w-7xl mx-auto px-6 pt-20 md:pt-28 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
@@ -79,10 +68,8 @@ const Headers = () => {
           />
         </div>
       </div>
-
-      {/* Bottom Section */}
 {/* Bottom Section */}
-<div className="relative z-20 w-full flex flex-col md:flex-row justify-between items-stretch mt-16 px-6 md:px-0 gap-4 md:gap-0">
+<div className="relative z-20 w-full flex flex-col md:flex-row justify-between items-stretch  mt-16 px-6 md:px-0  md:gap-0">
   {/* Left Strip */}
   <div className="flex items-center gap-4 bg-[#0f0d0e] px-6 py-6 w-full md:max-w-[50%]">
     <img
@@ -102,8 +89,8 @@ const Headers = () => {
   </div>
 
   {/* Right Button - moved to left side */}
-  <div className="flex items-center justify-start bg-transparent w-full md:max-w-[40%] px-48 py-6">
-    <button className="border border-white text-xs px-5 py-2 rounded-full hover:bg-white hover:text-black transition">
+  <div className="flex items-center justify-start bg-transparent w-full md:max-w-[40%] px-38 py-6">
+    <button className="border border-white text-md px-5 py-2 rounded-full hover:bg-white hover:text-black transition">
       Join our VIP Club
     </button>
   </div>
