@@ -27,14 +27,14 @@ const Headers = () => {
         </div>
 
         <ul className="hidden md:flex space-x-10 text-sm tracking-wide">
-          <li className="hover:text-yellow-300 cursor-pointer">Home</li>
-          <li className="hover:text-yellow-300 cursor-pointer">Menu</li>
-          <li className="hover:text-yellow-300 cursor-pointer">About</li>
-          <li className="hover:text-yellow-300 cursor-pointer">Reservation</li>
+          <li className="hover:text-yellow-600 cursor-pointer">Home</li>
+          <li className="hover:text-yellow-600 cursor-pointer">Menu</li>
+          <li className="hover:text-yellow-600 cursor-pointer">About</li>
+          <li className="hover:text-yellow-600 cursor-pointer">Reservation</li>
         </ul>
 
         <div className="flex items-center gap-4">
-          <button className="border border-white text-xs px-4 py-1 rounded-full hover:bg-white hover:text-black transition">
+          <button className="border border-white lg:block sm:block md:block hidden text-xs px-4 py-1 rounded-full hover:bg-white hover:text-black transition">
             Contact Us
           </button>
           <FaSearch className="text-white text-sm cursor-pointer" />
@@ -79,10 +79,8 @@ const Headers = () => {
           />
         </div>
       </div>
-
-      {/* Bottom Section */}
 {/* Bottom Section */}
-<div className="relative z-20 w-full flex flex-col md:flex-row justify-between items-stretch mt-16 px-6 md:px-0 gap-4 md:gap-0">
+<div className="relative z-20 w-full flex flex-col md:flex-row justify-between items-stretch  mt-16 px-6 md:px-0  md:gap-0">
   {/* Left Strip */}
   <div className="flex items-center gap-4 bg-[#0f0d0e] px-6 py-6 w-full md:max-w-[50%]">
     <img
@@ -102,8 +100,8 @@ const Headers = () => {
   </div>
 
   {/* Right Button - moved to left side */}
-  <div className="flex items-center justify-start bg-transparent w-full md:max-w-[40%] px-48 py-6">
-    <button className="border border-white text-xs px-5 py-2 rounded-full hover:bg-white hover:text-black transition">
+  <div className="flex items-center justify-start bg-transparent w-full md:max-w-[40%] px-38 py-6">
+    <button className="border border-white text-md px-5 py-2 rounded-full hover:bg-white hover:text-black transition">
       Join our VIP Club
     </button>
   </div>
