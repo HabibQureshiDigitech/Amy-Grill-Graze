@@ -1,4 +1,6 @@
-import { FaStar, FaArrowRight, FaPlus } from "react-icons/fa";
+
+import { FaStar, FaArrowRight } from "react-icons/fa";
+
 
 const dishes = [
   {
