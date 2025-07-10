@@ -1,12 +1,15 @@
 
 import videoo from "/video/Home1.mp4";
 import logoo from "/logo.png";
-import Frame from "/Frame.png";
 import profile from "/profileSction1.png";
-import { FaSearch, FaBars } from "react-icons/fa";
 import { MdDoubleArrow } from "react-icons/md";
+import NavbarLinks from "./NavbarLinks";
 
 const Headers = () => {
+
+
+
+
   return (
     <section className="relative w-full min-h-screen overflow-hidden font-serif text-white">
       {/* Background Video */}
@@ -21,26 +24,12 @@ const Headers = () => {
       <div className="absolute inset-y-0 left-0 w-full md:w-1/2 bg-[#0e0c0b]/80 z-10" />
 
       {/* Navbar */}
-      <nav className="relative z-20 flex items-center justify-between px-6 md:px-8 py-5 max-w-7xl mx-auto">
-        <div>
-          <img src={Frame} alt="logo" className="h-10 md:h-12" />
-        </div>
+      
 
-        <ul className="hidden md:flex space-x-10 text-sm tracking-wide">
-          <li className="hover:text-yellow-600 cursor-pointer">Home</li>
-          <li className="hover:text-yellow-600 cursor-pointer">Menu</li>
-          <li className="hover:text-yellow-600 cursor-pointer">About</li>
-          <li className="hover:text-yellow-600 cursor-pointer">Reservation</li>
-        </ul>
+        <NavbarLinks />
 
-        <div className="flex items-center gap-4">
-          <button className="border border-white lg:block sm:block md:block hidden text-xs px-4 py-1 rounded-full hover:bg-white hover:text-black transition">
-            Contact Us
-          </button>
-          <FaSearch className="text-white text-sm cursor-pointer" />
-          <FaBars className="text-white text-sm cursor-pointer md:hidden" />
-        </div>
-      </nav>
+        
+      
 
       {/* Main Content */}
       <div className="relative z-20 max-w-7xl mx-auto px-6 pt-20 md:pt-28 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
