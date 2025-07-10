@@ -5,11 +5,21 @@ import ProductPage from "../AdminDashboard/Pages/ProductsPage/ProductPage";
 import HomePage from "../Pages/HomePage";
 import { createBrowserRouter } from "react-router-dom";
 import NotFound from "../NotFound";
+import AboutPage from "../Pages/AboutPage";
+import MenuPage from "../Pages/MenuPage";
 
 const routes = createBrowserRouter([
   {
     path: '/',
     element: <HomePage />
+  },
+  {
+    path: '/about',
+    element: <AboutPage />
+  },
+  {
+    path: '/menu',
+    element: <MenuPage />
   },
   
   {

@@ -1,4 +1,3 @@
-import React from "react";
 
 export default function ExploreHistory() {
   return (
@@ -29,7 +28,7 @@ export default function ExploreHistory() {
           <div className="flex-grow" /> {/* Spacer */}
 
           {/* Circle Plus */}
-          <button className="absolute bottom-6 left-6 border-2 border-dashed border-white rounded-full w-12 h-12 flex items-center justify-center text-2xl">
+          <button className="absolute bottom-6 left-6 border-2 border-dashed border-white rounded-full w-12 h-12 flex items-center justify-center text-xl">
             +
           </button>
 

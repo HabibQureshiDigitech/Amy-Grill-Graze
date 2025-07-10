@@ -1,3 +1,7 @@
+import ExploreHistory from "../Components/ExploreHistory"
+import Headers from "../Components/Headers"
+import MenuShowcase from "../Components/MenuShowCase"
+import SeasonalSpecials from "../Components/SeasonalSpecials"
 
 function HomePage() {
   return (
