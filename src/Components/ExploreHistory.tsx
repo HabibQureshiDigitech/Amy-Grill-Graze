@@ -34,7 +34,7 @@ export default function ExploreHistory() {
           </button>
 
           {/* Read Testimonials Button */}
-          <button className="absolute bottom-4 right-4 px-4 py-2 bg-white text-black text-xs sm:text-sm rounded-full">
+          <button className="absolute bottom-2 right-4 px-4 py-2 bg-white text-black text-xs sm:text-sm rounded-full">
             Read Testimonials
           </button>
         </div>
