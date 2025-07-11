@@ -2,7 +2,7 @@ import { FaArrowRightLong } from "react-icons/fa6";
 
 const Crafting = () => {
   return (
-    <section className="bg-black text-white px-4 sm:px-8 py-12">
+    <section className="bg-black text-white min-h-screen flex flex-col md:flex-row items-stretch justify-between px-6 md:px-16 lg:px-24 py-12 gap-6 md:gap-8">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center max-w-7xl mx-auto">
         
         <div className="relative bg-cover bg-center rounded-2xl overflow-hidden lg:h-[582px] lg:w-[525px]" style={{ backgroundImage: "url('/Rectangle.png')" }}>
