@@ -2,7 +2,7 @@ import React from 'react'
 
 function ProductPage() {
   return (
-    <div>
+    <div className='p-8'>
       This is Product Page Here
     </div>
   )

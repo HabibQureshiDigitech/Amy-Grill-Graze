@@ -196,6 +196,7 @@ const DashboardLayout = () => {
           width={getSiderWidth()}
           style={{
             overflowY: "auto",
+            overflowX:'hidden',
 
             position: "fixed",
             left: 0,
@@ -216,12 +217,12 @@ const DashboardLayout = () => {
             </div>
           )}{" "}
           {getSiderWidth() > 70 && (
-            <div className="w-full flex  items-center opacity-100 h-17 ml-8 text-[#64748B] font-DMSans">
+            <div className="w-full flex  items-center opacity-100 h-17 ml-8 text-white font-DMSans">
               APPS & PAGES
             </div>
           )}
           {getSiderWidth() === 70 && (
-            <div className="w-full flex justify-center items-center bg-[#d4d4d4]">
+            <div className="w-full flex justify-center items-center">
               <img
                 className="py-5 h-22 w-19 object-contain"
                 src={"/Frame.png"}
@@ -240,14 +241,14 @@ const DashboardLayout = () => {
               onClick={({ key }) => navigate(key)}
               items={[
                 {
-                  key: "/",
+                  key: "/dashboard",
                   icon: (
                     <HomeOutlined
                       className={` ${collapsed || !see ? "ml-1 h-[20px] w-[20px] mr-5" : ""
                         }`}
                     />
                   ),
-                  label: <div className="text-[#0F172A]">Dashboard</div>,
+                  label: <div className="text-white hover:text-white focus:text-black">Dashboard</div>,
                 },
                 
                 {
@@ -255,12 +256,12 @@ const DashboardLayout = () => {
                   icon: (
                     <ProductOutlined   
                     
-                      className={`${collapsed || !see ? "ml-1 h-[20px] w-[20px] mr-5" : ""
+                      className={`${collapsed || !see ? "ml-1 h-[20px] w-[20px] mr-5 " : ""
                         }`}
                     />
                   ),
                   label: (
-                    <div className=" text-[#0F172A]">Products</div>
+                    <div className="text-white hover:text-white focus:text-black">Products</div>
                   ),
                 },
                 
@@ -271,7 +272,7 @@ const DashboardLayout = () => {
         {getSiderWidth() > 70 && currentPage === "Account Details" && (
           <>
             <div className="z-99999 ml-[239px] ">
-              <div className="text-[#0F172A] font-bold py-5 ml-4  text-2xl">
+              <div className="text-white font-bold py-5 ml-4  text-2xl">
                 Setting
               </div>{" "}
               <div className="border-b-[1px] w-10/12 mx-auto ">
@@ -291,7 +292,7 @@ const DashboardLayout = () => {
                   <img src="man.png" alt="" />
                 </span>
                 <div
-                  className={`ml-2 text-[#1E293B] font-DMSans
+                  className={`ml-2 text-white font-DMSans
                 }`}
                 >
                   Accounts Details
@@ -304,7 +305,7 @@ const DashboardLayout = () => {
                   <img src="security.png" alt="" />
                 </span>
                 <div
-                  className={`ml-2 text-[#1E293B] font-DMSans
+                  className={`ml-2 text-white font-DMSans
                 }`}
                 >
                   Security
@@ -317,7 +318,7 @@ const DashboardLayout = () => {
                   <img src="notifications.png" alt="" />
                 </span>
                 <div
-                  className={`ml-2 text-[#1E293B] font-DMSans
+                  className={`ml-2 text-white font-DMSans
                 }`}
                 >
                   Notification
@@ -330,7 +331,7 @@ const DashboardLayout = () => {
                   <img src="billing.png" alt="" />
                 </span>
                 <div
-                  className={`ml-2 text-[#1E293B] font-DMSans
+                  className={`ml-2 text-white font-DMSans
                 }`}
                 >
                   Plan & Billing
@@ -339,19 +340,20 @@ const DashboardLayout = () => {
             </div>
           </>
         )}{" "}
-        <Layout className="p-6 !rounded-xl">
+        <Layout className="p-8 !rounded-xl">
         <Header
-  className={`bg-white shadow-md transition-all duration-300 ${getMarginLeft()} p-4`}
+  className={`bg-white shadow-md transition-all duration-300 ${getMarginLeft()} p-6`}
   style={{
     paddingLeft: 24,
     paddingRight: 24,
     height: "auto",
   }}
 >
-<div className="w-full max-w-screen-xl mx-auto flex items-center justify-between overflow-x-auto gap-4">    
+<div className="w-full max-w-screen-xl mx-auto flex p-3 items-center justify-between overflow-x-auto gap-4">    
     {/* Left Side */}
     <div className="flex items-center gap-4 text-xl flex-shrink-0">
-      <button onClick={() => setCollapsed(!collapsed)}>
+      <button onClick={() => setCollapsed(!collapsed)}
+        className="text-white">
         {collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
       </button>
     </div>
@@ -364,8 +366,7 @@ const DashboardLayout = () => {
       {/* Profile */}
       <div className="flex items-center gap-3 relative cursor-pointer">
         <div className="text-right hidden sm:block leading-tight">
-          <h2 className="text-[14px] font-bold text-gray-500">User</h2>
-          <h2 className="text-[12px] font-bold text-gray-500">Account ID # 0001</h2>
+          <h2 className="text-[14px] font-bold text-white">Admin</h2>
         </div>
 
         <Dropdown overlay={profileMenu} placement="bottomRight" arrow>
@@ -397,7 +398,7 @@ const DashboardLayout = () => {
           </Content>{" "}
         </Layout>
       </Layout>{" "}
-     <Footer
+     {/* <Footer
         className={` transition-all duration-300  ${getMarginLeft()} z-9999 bg-gray-100`}
       // style={{
       //   position: "fixed",
@@ -417,7 +418,7 @@ const DashboardLayout = () => {
          
          </div>
          
-      </Footer>
+      </Footer> */}
     </>
   );
 };

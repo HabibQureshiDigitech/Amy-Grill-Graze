@@ -26,29 +26,50 @@ const routes = createBrowserRouter([
     path: '/dashboard',
     element: (
       <ConfigProvider
-        theme={{
-          token: {
-            colorPrimary: "#ffffff",
-            fontFamily: "DM Sans",
-          },
-          components: {
-            Menu: {
-              itemSelectedBg: "#e2e8f0",
-              itemColor: "#ffffff",
-              colorBgBase: "#FAFAF2",
-            },
-            Layout: {
-              colorBgHeader: "#ffffff",
-              colorBgBody: "#f8fafc",
-            },
-            Checkbox: {
-              colorPrimary: "#059669",
-              colorPrimaryActive: "#10b981",
-              colorPrimaryHover: "#4ade80",
-            },
-          },
-        }}
-      >
+       theme={{
+  token: {
+    colorPrimary: "#000000",      // Yellow-600 as the primary accent
+    // colorPrimary: "#CA8A04",      // Yellow-600 as the primary accent
+    fontFamily: "DM Sans",
+  },
+  components: {
+    Menu: {
+      itemSelectedBg: "#CA8A04",         // Yellow when selected
+      itemColor: "#FFFFFF",             // White text
+      colorBgBase: "#000000",          // Menu background black
+    },
+    Layout: {
+      colorBgHeader: "#000000",        // Black header
+      colorBgBody: "#000000",          // Black body
+    },
+    Checkbox: {
+      colorPrimary: "#CA8A04",         // Yellow checkbox
+      colorPrimaryActive: "#CA8A04",   // Yellow active
+      colorPrimaryHover: "#CA8A04",    // Yellow hover
+    },
+    Radio: {
+      colorPrimary: "#CA8A04",         // Yellow for radios
+      colorPrimaryHover: "#CA8A04",
+      colorPrimaryActive: "#CA8A04",
+    },
+    Button: {
+      colorPrimary: "#CA8A04",         // Yellow buttons
+      colorPrimaryHover: "#EAB308",   // Slightly lighter yellow on hover
+      colorText: "#FFFFFF",           // White text
+    },
+    Input: {
+      colorBorder: "#CA8A04",          // Yellow border
+      colorText: "#FFFFFF",            // White text
+      colorBgBase: "#000000",          // Black input background
+    },
+    // Icon: {
+    //   colorPrimary: "#CA8A04",         // Yellow icons
+    //   colorPrimaryHover: "#EAB308",
+    // },
+  },
+}}
+>
+
         <DashboardLayout />
       </ConfigProvider>
     ),
