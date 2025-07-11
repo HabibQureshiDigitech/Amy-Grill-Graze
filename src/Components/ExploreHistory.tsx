@@ -28,12 +28,12 @@ export default function ExploreHistory() {
           <div className="flex-grow" /> {/* Spacer */}
 
           {/* Circle Plus */}
-          <button className="absolute bottom-6 left-6 border-2 border-dashed border-white rounded-full w-12 h-12 flex items-center justify-center text-xl">
+          <button className="absolute bottom-6 left-6 active:scale-110 border-2 border-dashed border-white rounded-full w-12 h-12 flex items-center justify-center text-xl">
             +
           </button>
 
           {/* Read Testimonials Button */}
-          <button className="absolute bottom-2 right-4 px-4 py-2 bg-white text-black text-xs sm:text-sm rounded-full">
+          <button className="absolute bottom-2 right-4 px-4 py-2 active:scale-110 bg-white text-black text-xs sm:text-sm rounded-full">
             Read Testimonials
           </button>
         </div>
