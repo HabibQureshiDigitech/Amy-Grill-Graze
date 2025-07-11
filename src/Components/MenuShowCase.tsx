@@ -1,5 +1,5 @@
-
-import { FaStar, FaArrowRight } from "react-icons/fa";
+import { useState } from "react";
+import { FaStar, FaArrowRight, FaPlus } from "react-icons/fa";
 
 
 const dishes = [
@@ -48,6 +48,9 @@ const dishes = [
 ];
 
 const MenuShowcase = () => {
+  const tabs = ["All", "Small Plates", "Appetizers", "Special Sides", "Desserts"];
+  const [activeTab, setActiveTab] = useState("All");
+
   return (
     <section className="bg-black text-white py-24 px-6 md:px-32 font-serif">
       {/* Heading */}
@@ -62,27 +65,32 @@ const MenuShowcase = () => {
       </div>
 
       {/* Category Buttons */}
-      <div className="flex flex-wrap gap-4 justify-center w-full mb-10">
-        <button className="px-6 py-3 rounded-2xl bg-white text-black text-sm font-medium">
+      <div className="flex flex-wrap gap-16 justify-center w-full mb-10">
+        <button className="px-6 py-3 rounded-2xl bg-white text-black text-lg font-medium">
           Elite Dining Experience
+          <p className="text-xs">For Connoisseurs</p>
         </button>
-        <button className="px-6 py-3 rounded-2xl border border-gray-500 text-sm">
+        <button className="px-6 py-3 rounded-2xl border border-gray-500 text-lg">
           Essence of Flavor
+          <p className="text-xs">Signature Selections</p>
         </button>
-        <button className="px-6 py-3 rounded-2xl border border-gray-500 text-sm">
+        <button className="px-6 py-3 rounded-2xl border border-gray-500 text-lg">
           Culinary Masterpieces Unveiled
+          <p className="text-xs">Artisan Creations</p>
         </button>
       </div>
 
       {/* Filter Tabs */}
-      <div className="flex flex-wrap gap-4 justify-center mb-10 text-sm">
-        {["All", "Small Plates", "Appetizers", "Special Sides", "Desserts"].map((tab) => (
+      <div className="flex flex-wrap gap-4 justify-center mb-10 text-sm bg-[#161616] p-2 rounded-full">
+        {tabs.map((tab) => (
           <button
             key={tab}
-            className={`px-4 py-1 rounded-full ${tab === "All"
+            onClick={() => setActiveTab(tab)}
+            className={`px-4 py-1 rounded-full transition ${
+              activeTab === tab
                 ? "bg-white text-black"
-                : "border border-gray-500 text-white"
-              }`}
+                : "border border-gray-500 text-white hover:bg-white hover:text-black"
+            }`}
           >
             {tab}
           </button>
@@ -105,14 +113,14 @@ const MenuShowcase = () => {
     <img
       src={dish.image}
       alt={dish.title}
-      className="w-[220px] h-[220px] z-10 object-cover rounded-xl shadow-md"
+      className="w-[270px] h-[220px] z-20 object-contain rounded-xl shadow-md"
     />
   ) : (
     <div className="flex flex-col justify-center lg:mt-38 md:mt-38 sm:mt-38 mt-0  items-center text-center h-full text-gray-400">
       <h3 className="text-white text-lg font-bold">{dish.title}</h3>
       <h3 className="text-white text-sm px-4 mt-2 font-semibold">{dish.desc}</h3>
-      <div className="mt-4">
-        <FaPlus className="text-black bg-white rounded-full p-3 text-5xl" />
+      <div className="mt-6">
+        <FaPlus className="text-black bg-white rounded-full p-3 text-4xl active:scale-110" />
       </div>
     </div>
   )}
@@ -121,7 +129,7 @@ const MenuShowcase = () => {
 
             {/* Info Section */}
             {dish.image && (
-              <div className="bg-[#1a1a1a] px-5 py-4 rounded-b-2xl flex flex-col gap-2">
+              <div className="bg-transparent px-5 py-4 rounded-b-2xl flex flex-col gap-2">
                 <h3 className="text-white text-base font-semibold">{dish.title}</h3>
                 {dish.desc && (
                   <p className="text-gray-400 text-sm leading-snug">
