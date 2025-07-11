@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { FaStar, FaArrowRight, FaPlus } from "react-icons/fa";
 
+
 const dishes = [
   {
     title: "Foie Gras Torchon",
