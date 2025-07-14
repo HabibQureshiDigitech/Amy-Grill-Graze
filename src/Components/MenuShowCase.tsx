@@ -1,6 +1,10 @@
+
+
+
 import { useState } from "react";
 import { FaStar, FaArrowRight, FaPlus } from "react-icons/fa";
 import { MdOutlineArrowOutward } from "react-icons/md";
+
 
 const dishes = [
   {
