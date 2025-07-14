@@ -10,27 +10,27 @@ function NavbarLinks() {
     <>
       {/* Navbar */}
       <nav className="relative z-20 flex items-center mt-3 justify-between px-4 md:px-6 py-4 max-w-7xl mx-auto">
-        <div className="flex gap-17">
+        <div className="flex gap-15">
           <img src={Frame} alt="logo" className="h-10 md:h-12" />
-          <ul className="hidden md:flex space-x-10 text-xs tracking-wide mt-2">
-            <li className="hover:text-yellow-600 cursor-pointer">
+          <ul className="hidden md:flex space-x-7 text-xs tracking-wide mt-2">
+            <li className="hover:text-white text-[#9F9F9F] cursor-pointer">
               <Link to={"/"}>Home</Link>
             </li>
-            <li className="hover:text-yellow-600 cursor-pointer">
+            <li className="hover:text-white text-[#9F9F9F] cursor-pointer">
               <Link to={"/menu"}>Menu</Link>
             </li>
-            <li className="hover:text-yellow-600 cursor-pointer">
+            <li className="hover:text-white text-[#9F9F9F] cursor-pointer">
               <Link to={"/about"}>About</Link>
             </li>
-            <li className="hover:text-yellow-600 cursor-pointer">
-              <Link to={"/"}>Reservation</Link>
+            <li className="hover:text-white text-[#9F9F9F] cursor-pointer">
+              <Link to={"/reservation"}>Reservation</Link>
             </li>
           </ul>
         </div>
 
         <div className="flex items-center gap-4">
           <button className="border border-white lg:block sm:block md:block hidden text-xs px-4 py-1 rounded-full hover:bg-white hover:text-black transition">
-            Contact Us
+           <Link to={'/contactus'}>Contact Us</Link>
           </button>
           <FaSearch className="text-white text-sm lg:block sm:block md:block hidden cursor-pointer" />
           <FaBars

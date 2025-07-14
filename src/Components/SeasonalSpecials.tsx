@@ -5,7 +5,7 @@ export default function SeasonalSpecials() {
     <div className="bg-black text-white min-h-screen flex flex-col md:flex-row items-stretch justify-between px-6 md:px-16 lg:px-24 py-12 gap-6 md:gap-8">
   {/* Left Content */}
   <div className="flex-1 flex flex-col justify-center space-y-6">
-    <p className="text-sm tracking-widest text-gray-400">BLUE ENERGY MOJITO  -----------</p>
+    <p className="text-sm tracking-widest text-gray-400">BLUE ENERGY MOJITO  ____________</p>
     <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
       Seasonal <br /> Specials
     </h1>
@@ -69,7 +69,7 @@ export default function SeasonalSpecials() {
             className="w-16 h-16 md:w-20 md:h-20 rounded-lg object-cover"
           />
           <div>
-            <p className="text-xs text-gray-500">{item.category}</p>
+            <p className="text-sm text-white">{item.category}   ____________</p>
             <h4 className="text-sm md:text-base text-white font-medium">{item.title}</h4>
             <a href="#" className="text-xs underline hover:text-gray-300 active:scale-110">
               See More →

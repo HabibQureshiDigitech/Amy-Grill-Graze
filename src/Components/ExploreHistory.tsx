@@ -41,8 +41,8 @@ export default function ExploreHistory() {
         {/* RIGHT SIDE CARDS */}
         <div className="flex flex-col gap-6 w-full md:w-1/3">
           {/* Top Right Card */}
-          <div className="relative bg-gray-800 rounded-3xl p-6 sm:p-7 md:p-8 flex flex-col gap-2">
-            <button className="absolute top-4 right-4 text-lg">↗</button>
+          <div className="relative bg-gray-900 rounded-3xl p-6 sm:p-7 md:p-8 flex flex-col gap-2">
+            <button className="absolute border h-8 w-8 rounded-full active:scale-110 border-white  top-4 right-4 text-lg">↗</button>
             <h3 className="text-xs text-gray-400">Meet the Chef</h3>
             <h2 className="text-lg sm:text-xl font-semibold">
               Culinary Excellence
