@@ -7,6 +7,8 @@ import { createBrowserRouter } from "react-router-dom";
 import NotFound from "../NotFound";
 import AboutPage from "../Pages/AboutPage";
 import MenuPage from "../Pages/MenuPage";
+import Contactus from "../Pages/Contactus";
+import Reservation from "../Pages/Reservation";
 
 const routes = createBrowserRouter([
   {
@@ -20,6 +22,14 @@ const routes = createBrowserRouter([
   {
     path: '/menu',
     element: <MenuPage />
+  },
+  {
+    path: '/contactus',
+    element: <Contactus />
+  },
+  {
+    path: '/reservation',
+    element: <Reservation />
   },
   
   {
