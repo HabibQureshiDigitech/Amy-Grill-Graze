@@ -39,23 +39,23 @@ const Headers = () => {
           <p className="text-sm text-yellow-100 tracking-wider">
             Savor the Extraordinary _____________
           </p>
-          <h1 className="text-4xl sm:text-5xl md:text-5xl font-extrabold leading-tight text-yellow-200">
+          <h1 className="text-4xl sm:text-5xl md:text-5xl font-extrabold leading-tight text-[#CFC39B]">
             A Symphony <span className="text-white">of</span>
           </h1>
           <h1 className="text-4xl sm:text-5xl md:text-5xl font-extrabold leading-tight">
             Taste <span className="italic underline">& Elegance</span>
           </h1>
-          <p className="text-gray-300 text-base max-w-md">
+          <p className="text-gray-300 text-base max-w-md lg:ml-44">
             Discover the perfect harmony between indulgent flavors and
             unparalleled elegance. Each dish at our restaurant is a symphony
             crafted to captivate all your senses.
           </p>
-          <div className="flex gap-6 items-center pt-2">
+          <div className="flex gap-6 items-center pt-2 lg:ml-44">
             <div className="flex items-center gap-1 text-white text-sm">
-              <span className='rounded-full border p-2 h-9 mb-2 w-9 px-3 border-white'>1</span>/<span>5</span>
+              <span className='rounded-full border h-9 w-9 border-white py-1 px-3'>1</span>/<span>5</span>
             </div>
-            <button className="underline text-sm text-yellow-600 active:scale-110 transition flex">
-              <MdOutlineMenuOpen className="mt-0.5 mr-1 text-lg text-yellow-600" />
+            <button className="underline text-sm text-white active:scale-110 transition flex">
+              <MdOutlineMenuOpen className="mt-0.5 mr-1 text-lg text-[#CFC39B]" />
               Make a Reservation
             </button>
           </div>
@@ -92,7 +92,7 @@ const Headers = () => {
 
   {/* Right Button - moved to left side */}
   <div className="flex items-center justify-center bg-transparent w-full px-4 py-3">
-  <button className="border border-white text-sm sm:text-md px-4 sm:px-5 py-2 rounded hover:bg-white hover:text-black transition">
+  <button className="border rounded-tl-2xl rounded-br-2xl border-white text-sm sm:text-md px-4 sm:px-5 py-2 rounded hover:bg-white hover:text-black transition">
     Join our VIP Club
   </button>
 </div>
