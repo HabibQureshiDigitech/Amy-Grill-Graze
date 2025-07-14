@@ -45,9 +45,9 @@ function MenuPage() {
     <div className="bg-black text-white">
       <NavbarLinks />
       <div className="relative z-20 flex items-center justify-center text-center h-[calc(100vh-60px)] px-4">
-        <h1 className="text-4xl md:text-6xl font-extrabold text-yellow-200">
-          {" "}
-          Main
+
+        <h1 className="text-4xl md:text-6xl font-extrabold text-[#CFC39B]"> Main
+
           <br />
           <p className="text-white text-sm mt-2">
             Perfect to share or start your flavor journey.

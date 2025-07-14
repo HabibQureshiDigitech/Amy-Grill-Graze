@@ -13,7 +13,7 @@ const HistorySection = () => {
           <div className="absolute inset-0 bg-black/50"></div>
         </div>
         <div className="md:w-1/2">
-          <h2 className="text-4xl font-bold mb-4 text-yellow-300">History</h2>
+          <h2 className="text-4xl font-bold mb-4 text-[#CFC39B]">History</h2>
           <p className="text-gray-300 text-lg leading-relaxed">
             Lorem ipsum dolor sit amet consectetur. At duis purus est nulla facilisis. Netus in sit adipiscing
             volutpat sed. Integer mi egestas mauris bibendum feugiat. Velit sagittis aliquet fermentum risus.
@@ -33,7 +33,7 @@ const HistorySection = () => {
           <div className="absolute inset-0 bg-black/50"></div>
         </div>
         <div className="md:w-1/2">
-          <h2 className="text-4xl font-bold mb-4 text-yellow-300">The Amy Grill &amp; Graze Story</h2>
+          <h2 className="text-4xl font-bold mb-4 text-[#CFC39B]">The Amy Grill &amp; Graze Story</h2>
           <p className="text-gray-300 text-lg leading-relaxed">
             Lorem ipsum dolor sit amet consectetur. At duis purus est nulla facilisis. Netus in sit adipiscing
             volutpat sed. Integer mi egestas mauris bibendum feugiat. Velit sagittis aliquet fermentum risus.

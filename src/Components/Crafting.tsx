@@ -3,7 +3,7 @@ import { BsArrowUpRight } from "react-icons/bs";
 
 const Crafting = () => {
   return (
-    <section className="bg-black text-white px-4 sm:px-8 py-12">
+    <section className="bg-black text-white min-h-screen flex flex-col md:flex-row items-stretch justify-between px-6 md:px-16 lg:px-24 py-12 gap-6 md:gap-8">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center max-w-7xl mx-auto">
         <div
           className="relative w-full rounded-2xl overflow-hidden bg-cover bg-center h-[300px] sm:h-[350px] md:h-[400px] lg:h-[582px] lg:w-[525px] min-w-[250px]"

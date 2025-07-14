@@ -4,6 +4,7 @@ import logoo from "/logo.png";
 import profile from "/profileSction1.png";
 import { MdDoubleArrow } from "react-icons/md";
 import NavbarLinks from "./NavbarLinks";
+import { MdOutlineMenuOpen } from "react-icons/md";
 
 const Headers = () => {
 
@@ -32,28 +33,29 @@ const Headers = () => {
       
 
       {/* Main Content */}
-      <div className="relative z-20 max-w-7xl mx-auto px-6 pt-20 md:pt-28 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+      <div className="relative z-20 max-w-7xl mx-auto px-6 pt-20 md:pt-15 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
         {/* Left Text */}
         <div className="space-y-6">
           <p className="text-sm text-yellow-100 tracking-wider">
-            Savor the Extraordinary
+            Savor the Extraordinary _____________
           </p>
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight text-yellow-200">
+          <h1 className="text-4xl sm:text-5xl md:text-5xl font-extrabold leading-tight text-[#CFC39B]">
             A Symphony <span className="text-white">of</span>
           </h1>
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight">
-            Taste & <span className="italic underline">Elegance</span>
+          <h1 className="text-4xl sm:text-5xl md:text-5xl font-extrabold leading-tight">
+            Taste <span className="italic underline">& Elegance</span>
           </h1>
-          <p className="text-gray-300 text-base max-w-md">
+          <p className="text-gray-300 text-base max-w-md lg:ml-44">
             Discover the perfect harmony between indulgent flavors and
             unparalleled elegance. Each dish at our restaurant is a symphony
             crafted to captivate all your senses.
           </p>
-          <div className="flex gap-6 items-center pt-2">
+          <div className="flex gap-6 items-center pt-2 lg:ml-44">
             <div className="flex items-center gap-1 text-white text-sm">
-              <span>1</span>/<span>5</span>
+              <span className='rounded-full border h-9 w-9 border-white py-1 px-3'>1</span>/<span>5</span>
             </div>
-            <button className="underline text-sm hover:text-yellow-300 transition">
+            <button className="underline text-sm text-white active:scale-110 transition flex">
+              <MdOutlineMenuOpen className="mt-0.5 mr-1 text-lg text-[#CFC39B]" />
               Make a Reservation
             </button>
           </div>
@@ -69,13 +71,13 @@ const Headers = () => {
         </div>
       </div>
 {/* Bottom Section */}
-<div className="relative z-20 w-full flex flex-col md:flex-row justify-between items-stretch  mt-16 px-6 md:px-0  md:gap-0">
+<div className="relative z-20 w-full flex flex-col md:flex-row justify-between items-stretch mt-10 px-6 md:px-0  md:gap-0">
   {/* Left Strip */}
   <div className="flex items-center gap-4 bg-[#0f0d0e] px-6 py-6 w-full md:max-w-[50%]">
     <img
       src={profile}
       alt="profile"
-      className="w-11 h-11 rounded-full object-cover"
+      className="w-13 h-13 rounded-full object-cover"
     />
     <div className="flex-1">
       <p className="text-white text-sm font-semibold">
@@ -89,16 +91,18 @@ const Headers = () => {
   </div>
 
   {/* Right Button - moved to left side */}
-  <div className="flex items-center justify-start bg-transparent w-full md:max-w-[40%] px-38 py-6">
-    <button className="border border-white text-md px-5 py-2 rounded-full hover:bg-white hover:text-black transition">
-      Join our VIP Club
-    </button>
-  </div>
+  <div className="flex items-center justify-center bg-transparent w-full px-4 py-3">
+  <button className="border rounded-tl-2xl rounded-br-2xl border-white text-sm sm:text-md px-4 sm:px-5 py-2 rounded hover:bg-white hover:text-black transition">
+    Join our VIP Club
+  </button>
+</div>
 </div>
 
 
 
     </section>
+
+
   );
 };
 
