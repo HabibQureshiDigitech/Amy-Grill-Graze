@@ -5,26 +5,26 @@ export default function SeasonalSpecials() {
     <div className="bg-black text-white min-h-screen flex flex-col md:flex-row items-stretch justify-between px-6 md:px-16 lg:px-24 py-12 gap-6 md:gap-8">
   {/* Left Content */}
   <div className="flex-1 flex flex-col justify-center space-y-6">
-    <p className="text-sm tracking-widest text-gray-400">BLUE ENERGY MOJITO  ____________</p>
-    <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+    <p className="text-sm tracking-widest text-gray-400 font-lora">BLUE ENERGY MOJITO  ____________</p>
+    <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight font-lora">
       Seasonal <br /> Specials
     </h1>
 
     <div>
-      <h2 className="text-sm md:text-base text-gray-400 font-medium">SUMMER PASSION</h2>
-      <p className="text-sm md:text-base text-gray-400 mt-2 leading-relaxed max-w-sm">
-        Don Q Cristal Rum, blueberries, mint syrup, lime juice, and Red Bull Blue Edition, garnished with a mint sprig.
+      <h2 className="text-sm md:text-base text-gray-400 font-medium font-public">SUMMER PASSION</h2>
+      <p className="text-sm md:text-base text-gray-400 mt-2 leading-relaxed max-w-sm font-public">
+        Don Q Cristal Rum, blueberries, mint syrup, lime juice, and Red Bull Blue Edition; garnished with a mint sprig.
       </p>
     </div>
 
     <div className="flex items-center space-x-4">
-      <div className="flex items-center text-yellow-400 text-base">
+      <div className="flex items-center text-[#FFFDF4] text-base font-public">
         ⭐ 4.9
       </div>
-      <div className="text-base text-white font-semibold">$45.12</div>
+      <div className="text-base text-white font-semibold font-public">$45.12</div>
     </div>
 
-    <a href="#" className="text-sm underline active:scale-110 hover:text-gray-300 inline-flex items-center gap-1">
+    <a href="#" className="text-sm underline active:scale-110 text-[#9F9F9F] inline-flex items-center gap-1 font-public">
       See More →
     </a>
   </div>
@@ -40,11 +40,11 @@ export default function SeasonalSpecials() {
 
   {/* Right Menu */}
   <div className="flex-1 flex flex-col justify-between space-y-6">
-    <h3 className="text-sm md:text-base text-gray-300">
-      A Tempting Prelude to Your Culinary Journey
+    <h3 className=" lg:text-[24px] md:text-base text-gray-300 font-public">
+      A Tempting Prelude to Your <br /> Culinary Journey
     </h3>
 
-    <div className="flex-1 flex flex-col justify-center space-y-4">
+    <div className="flex-1 flex flex-col justify-center space-y-4 font-public">
       {[
         {
           title: "Weekend Indulgence: A Collection of Brunch",
@@ -69,10 +69,11 @@ export default function SeasonalSpecials() {
             className="w-16 h-16 md:w-20 md:h-20 rounded-lg object-cover"
           />
           <div>
-            <p className="text-sm text-white">{item.category}   ____________</p>
-            <h4 className="text-sm md:text-base text-white font-medium">{item.title}</h4>
-            <a href="#" className="text-xs underline hover:text-gray-300 active:scale-110">
-              See More →
+            <p className="text-[12px] text-[#FFFDF4]">{item.category}   ____________</p>
+            <h4 className="text-[16px] md:text-base text-[#FFFDF4] font-medium">{item.title}</h4>
+            <a href="#" className="text-xs underline text-[#9F9F9F] active:scale-110 font-public">
+              See More → 
+             
             </a>
           </div>
         </div>
