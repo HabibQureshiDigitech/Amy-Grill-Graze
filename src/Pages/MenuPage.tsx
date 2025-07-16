@@ -49,10 +49,12 @@ function MenuPage() {
 
       {/* Hero Section */}
       <div className="relative z-10 flex flex-col items-center justify-center text-center h-[calc(100vh-60px)] px-4">
+
         <h1 className="text-4xl md:text-6xl lg:text-[124.75px] font-extrabold text-[#CFC39B] font-lora">
           Main
         </h1>
         <p className="text-[#FFFDF4] text-[24px] font-public mt-2">
+
           Perfect to share or start your flavor journey.
         </p>
       </div>
@@ -92,6 +94,7 @@ function MenuPage() {
             {/* Center: Scrollable Category Nav */}
             <div className="flex-1 flex  gap-4 text-[19px] md:text-sm text-[#080808] font-semibold whitespace-nowrap overflow-x-auto scrollbar-hide px-4 font-public">
               {categories.slice(0, 7).map((category, index) => (
+
                 <a href="#" key={index} className="hover:text-yellow-600">
                   {category}
                 </a>
@@ -118,6 +121,7 @@ function MenuPage() {
                   {item.price  &&  <span> - {item.price} </span>}
                 </div>
                 <p className="text-[16px] font-normal text-[#9F9F9F] mt-1 font-public">
+
                   {item.description}
                 </p>
               </div>
@@ -126,18 +130,22 @@ function MenuPage() {
 
           {/* New Section: Starters & Small Plates */}
           <div className="mt-10 bg-white p-6">
+
             <h2 className="text-2xl lg:text-[43px] font-semibold text-black mb-6 font-lora italic">
+
               Starters & Small Plates
             </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {/* 1 */}
               <div className="bg-[#FBFBFB] p-6  shadow-sm">
+
                 <div className="flex  text-[#000000] font-semibold lg:text-[32px] font-public">
                   <span>Spring Rolls (Vegan)</span>
                   <span> - 8</span>
                 </div>
                 <p className="text-[16px] text-[#9F9F9F] font-normal mt-1 font-public ">
+
                   Crispy rolls stuffed with seasoned noodles and vegetables,
                   served with sweet & sour sauce.
                 </p>
@@ -145,11 +153,13 @@ function MenuPage() {
 
               {/* 2 */}
               <div className="bg-[#FBFBFB] p-6  shadow-sm">
+
                 <div className="flex text-[#000000] font-semibold lg:text-[32px] font-public">
                   <span>Mini Caprese Skewers (2 pcs)</span>
                   <span>– 9</span>
                 </div>
                 <p className="text-[16px] text-[#9F9F9F] font-normal mt-1 font-public ">
+
                   Cherry tomatoes, fresh mozzarella, and basil skewers drizzled
                   with tangy balsamic glaze.
                 </p>
@@ -157,11 +167,13 @@ function MenuPage() {
 
               {/* 3 */}
               <div className="bg-[#FBFBFB] p-6  shadow-sm">
+
                 <div className="flex  text-[#000000] font-semibold lg:text-[32px] font-public">
                   <span>Crunch Bombs</span>
                   <span>– 12</span>
                 </div>
                 <p className="text-[16px] text-[#9F9F9F] font-normal font-public mt-1">
+
                   Spiced chicken and beef meatballs served crispy with a cool
                   mint yogurt dip.
                 </p>
@@ -169,11 +181,13 @@ function MenuPage() {
 
               {/* 4 */}
               <div className="bg-[#FBFBFB] p-6  shadow-sm">
+
                 <div className="flex  text-[#000000] font-semibold lg:text-[32px] font-public">
                   <span>Seasonal Golden Mix Bites</span>
                   <span>– 10</span>
                 </div>
                 <p className="text-[16px] text-[#9F9F9F] font-normal font-public mt-1">
+
                   Chickpea-battered mixed veggies fried to golden perfection,
                   with creamy house dressing.
                 </p>
@@ -181,11 +195,13 @@ function MenuPage() {
 
               {/* 5 */}
               <div className="bg-[#FBFBFB] p-6  shadow-sm">
+
                 <div className="flex  text-[#000000] font-semibold lg:text-[32px] font-public">
                   <span>Spring Rolls (Vegan)</span>
                   <span>– 8</span>
                 </div>
                 <p className="text-[16px] text-[#9F9F9F] font-normal font-public mt-1">
+
                   Crispy rolls stuffed with seasoned noodles and vegetables,
                   served with sweet & sour sauce.
                 </p>
@@ -193,11 +209,13 @@ function MenuPage() {
 
               {/* 6 */}
               <div className="bg-[#FBFBFB] p-6  shadow-sm">
+
                 <div className="flex  text-[#000000] font-semibold lg:text-[32px] font-public">
                   <span>Mini Caprese Skewers (2 pcs)</span>
                   <span>– 9</span>
                 </div>
                 <p className="text-[16px] text-[#9F9F9F] font-normal font-public mt-1">
+
                   Cherry tomatoes, fresh mozzarella, and basil skewers drizzled
                   with tangy balsamic glaze.
                 </p>
@@ -208,18 +226,22 @@ function MenuPage() {
 
           {/* New Section: Starters & Small Plates */}
           <div className="mt-10 bg-white p-6">
+
             <h2 className="text-2xl lg:text-[43px] font-semibold text-[#000000] font-lora italic mb-6">
+
               Comfrot Soups
             </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {/* 1 */}
               <div className="bg-[#FBFBFB] p-6  shadow-sm">
+
                 <div className="flex font-public text-[32px] font-semibold text-[#000000]">
                   <span>Spring Rolls (Vegan)</span>
                   <span>– 8</span>
                 </div>
                 <p className="text-[16px] text-[#9F9F9F] font-normal  font-public mt-1">
+
                   Crispy rolls stuffed with seasoned noodles and vegetables,
                   served with sweet & sour sauce.
                 </p>
@@ -227,11 +249,13 @@ function MenuPage() {
 
               {/* 2 */}
               <div className="bg-[#FBFBFB] p-6  shadow-sm">
+
                 <div className="flex font-public text-[32px] font-semibold text-[#000000]">
                   <span>Mini Caprese Skewers (2 pcs)</span>
                   <span>– 9</span>
                 </div>
                 <p className="text-[16px] text-[#9F9F9F] font-normal  font-public mt-1">
+
                   Cherry tomatoes, fresh mozzarella, and basil skewers drizzled
                   with tangy balsamic glaze.
                 </p>
@@ -239,11 +263,13 @@ function MenuPage() {
 
               {/* 3 */}
               <div className="bg-[#FBFBFB] p-6  shadow-sm">
+
                 <div className="flex font-public text-[32px] font-semibold text-[#000000]">
                   <span>Crunch Bombs</span>
                   <span>– 12</span>
                 </div>
                 <p className="text-[16px] text-[#9F9F9F] font-normal  font-public mt-1">
+
                   Spiced chicken and beef meatballs served crispy with a cool
                   mint yogurt dip.
                 </p>
@@ -251,11 +277,13 @@ function MenuPage() {
 
               {/* 4 */}
               <div className="bg-[#FBFBFB] p-6  shadow-sm">
+
                 <div className="flex font-public text-[32px] font-semibold text-[#000000]">
                   <span>Seasonal Golden Mix Bites</span>
                   <span>– 10</span>
                 </div>
                 <p className="text-[16px] text-[#9F9F9F] font-normal  font-public mt-1">
+
                   Chickpea-battered mixed veggies fried to golden perfection,
                   with creamy house dressing.
                 </p>
@@ -263,11 +291,13 @@ function MenuPage() {
 
               {/* 5 */}
               <div className="bg-[#FBFBFB] p-6  shadow-sm">
+
                 <div className="flex font-public text-[32px] font-semibold text-[#000000]">
                   <span>Spring Rolls (Vegan)</span>
                   <span>– 8</span>
                 </div>
                 <p className="text-[16px] text-[#9F9F9F] font-normal  font-public mt-1">
+
                   Crispy rolls stuffed with seasoned noodles and vegetables,
                   served with sweet & sour sauce.
                 </p>
@@ -275,11 +305,13 @@ function MenuPage() {
 
               {/* 6 */}
               <div className="bg-[#FBFBFB] p-6  shadow-sm">
+
                 <div className="flex font-public text-[32px] font-semibold text-[#000000]">
                   <span>Mini Caprese Skewers (2 pcs)</span>
                   <span>– 9</span>
                 </div>
                 <p className="text-[16px] text-[#9F9F9F] font-normal  font-public mt-1">
+
                   Cherry tomatoes, fresh mozzarella, and basil skewers drizzled
                   with tangy balsamic glaze.
                 </p>
@@ -290,18 +322,22 @@ function MenuPage() {
 
           {/* New Section: Starters & Small Plates */}
           <div className="mt-10 bg-white p-6">
+
             <h2 className="text-2xl lg:text-[43px] font-semibold text-[#000000] font-lora italic mb-6">
+
               Amy Artisan Pizzas
             </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {/* 1 */}
               <div className="bg-[#FBFBFB] p-6  shadow-sm">
+
                 <div className="flex font-public text-[32px] font-semibold text-[#000000]">
                   <span>Spring Rolls (Vegan)</span>
                   <span>– 8</span>
                 </div>
                 <p className="text-[16px] text-[#9F9F9F] font-normal  font-public mt-1">
+
                   Crispy rolls stuffed with seasoned noodles and vegetables,
                   served with sweet & sour sauce.
                 </p>
@@ -309,11 +345,13 @@ function MenuPage() {
 
               {/* 2 */}
               <div className="bg-[#FBFBFB] p-6  shadow-sm">
+
                 <div className="flex font-public text-[32px] font-semibold text-[#000000]">
                   <span>Mini Caprese Skewers (2 pcs)</span>
                   <span>– 9</span>
                 </div>
                 <p className="text-[16px] text-[#9F9F9F] font-normal font-public mt-1">
+
                   Cherry tomatoes, fresh mozzarella, and basil skewers drizzled
                   with tangy balsamic glaze.
                 </p>
@@ -321,11 +359,13 @@ function MenuPage() {
 
               {/* 3 */}
               <div className="bg-[#FBFBFB] p-6  shadow-sm">
+
                 <div className="flex font-public text-[32px] font-semibold text-[#000000]">
                   <span>Crunch Bombs</span>
                   <span>– 12</span>
                 </div>
                 <p className="text-[16px] text-[#9F9F9F] font-normal font-public mt-1">
+
                   Spiced chicken and beef meatballs served crispy with a cool
                   mint yogurt dip.
                 </p>
@@ -333,11 +373,13 @@ function MenuPage() {
 
               {/* 4 */}
               <div className="bg-[#FBFBFB] p-6  shadow-sm">
+
                 <div className="flex font-public text-[32px] font-semibold text-[#000000]">
                   <span>Seasonal Golden Mix Bites</span>
                   <span>– 10</span>
                 </div>
                 <p className="text-[16px] text-[#9F9F9F] font-normal font-public mt-1">
+
                   Chickpea-battered mixed veggies fried to golden perfection,
                   with creamy house dressing.
                 </p>
@@ -345,11 +387,13 @@ function MenuPage() {
 
               {/* 5 */}
               <div className="bg-[#FBFBFB] p-6  shadow-sm">
+
                 <div className="flex font-public text-[32px] font-semibold text-[#000000]">
                   <span>Spring Rolls (Vegan)</span>
                   <span>– 8</span>
                 </div>
                 <p className="text-[16px] text-[#9F9F9F] font-normal font-public mt-1">
+
                   Crispy rolls stuffed with seasoned noodles and vegetables,
                   served with sweet & sour sauce.
                 </p>
@@ -357,6 +401,7 @@ function MenuPage() {
 
               {/* 6 */}
               <div className="bg-[#FBFBFB] p-6  shadow-sm">
+
                 <div className="flex font-public text-[32px] font-semibold text-[#000000]">
                   <span>Mini Caprese Skewers (2 pcs)</span>
                   <span>– 9</span>
@@ -370,7 +415,9 @@ function MenuPage() {
           </div>
         </div>
       </section>
+
       <Footer />
+
     </div>
   );
 }
