@@ -116,7 +116,7 @@ function MenuPage() {
           <div className="bg-white p-6 mt-5 flex flex-col gap-4">
             {menuItems.map((item, index) => (
               <div key={index} className="bg-[#FBFBFB]  shadow-sm p-6">
-                <div className="text-lg lg:text-[32px]  text-[#000000] font-semibold flex flex-wrap font-public">
+                <div className="text-lg lg:text-[32px]  text-[#000000] font-medium flex flex-wrap font-public">
                   <span>{item.title}</span>
                   {item.price  &&  <span> - {item.price} </span>}
                 </div>
@@ -140,7 +140,7 @@ function MenuPage() {
               {/* 1 */}
               <div className="bg-[#FBFBFB] p-6  shadow-sm">
 
-                <div className="flex  text-[#000000] font-semibold lg:text-[32px] font-public">
+                <div className="flex  text-[#000000] font-medium lg:text-[32px] font-public">
                   <span>Spring Rolls (Vegan)</span>
                   <span> - 8</span>
                 </div>
@@ -154,7 +154,7 @@ function MenuPage() {
               {/* 2 */}
               <div className="bg-[#FBFBFB] p-6  shadow-sm">
 
-                <div className="flex text-[#000000] font-semibold lg:text-[32px] font-public">
+                <div className="flex text-[#000000] font-medium lg:text-[32px] font-public">
                   <span>Mini Caprese Skewers (2 pcs)</span>
                   <span>– 9</span>
                 </div>
@@ -168,7 +168,7 @@ function MenuPage() {
               {/* 3 */}
               <div className="bg-[#FBFBFB] p-6  shadow-sm">
 
-                <div className="flex  text-[#000000] font-semibold lg:text-[32px] font-public">
+                <div className="flex  text-[#000000] font-medium lg:text-[32px] font-public">
                   <span>Crunch Bombs</span>
                   <span>– 12</span>
                 </div>
@@ -182,7 +182,7 @@ function MenuPage() {
               {/* 4 */}
               <div className="bg-[#FBFBFB] p-6  shadow-sm">
 
-                <div className="flex  text-[#000000] font-semibold lg:text-[32px] font-public">
+                <div className="flex  text-[#000000] font-medium lg:text-[32px] font-public">
                   <span>Seasonal Golden Mix Bites</span>
                   <span>– 10</span>
                 </div>
@@ -196,7 +196,7 @@ function MenuPage() {
               {/* 5 */}
               <div className="bg-[#FBFBFB] p-6  shadow-sm">
 
-                <div className="flex  text-[#000000] font-semibold lg:text-[32px] font-public">
+                <div className="flex  text-[#000000] font-medium lg:text-[32px] font-public">
                   <span>Spring Rolls (Vegan)</span>
                   <span>– 8</span>
                 </div>
@@ -210,7 +210,7 @@ function MenuPage() {
               {/* 6 */}
               <div className="bg-[#FBFBFB] p-6  shadow-sm">
 
-                <div className="flex  text-[#000000] font-semibold lg:text-[32px] font-public">
+                <div className="flex  text-[#000000] font-medium lg:text-[32px] font-public">
                   <span>Mini Caprese Skewers (2 pcs)</span>
                   <span>– 9</span>
                 </div>
@@ -236,7 +236,7 @@ function MenuPage() {
               {/* 1 */}
               <div className="bg-[#FBFBFB] p-6  shadow-sm">
 
-                <div className="flex font-public text-[32px] font-semibold text-[#000000]">
+                <div className="flex font-public text-[32px] font-medium text-[#000000]">
                   <span>Spring Rolls (Vegan)</span>
                   <span>– 8</span>
                 </div>
@@ -250,7 +250,7 @@ function MenuPage() {
               {/* 2 */}
               <div className="bg-[#FBFBFB] p-6  shadow-sm">
 
-                <div className="flex font-public text-[32px] font-semibold text-[#000000]">
+                <div className="flex font-public text-[32px] font-medium text-[#000000]">
                   <span>Mini Caprese Skewers (2 pcs)</span>
                   <span>– 9</span>
                 </div>
@@ -264,7 +264,7 @@ function MenuPage() {
               {/* 3 */}
               <div className="bg-[#FBFBFB] p-6  shadow-sm">
 
-                <div className="flex font-public text-[32px] font-semibold text-[#000000]">
+                <div className="flex font-public text-[32px] font-medium text-[#000000]">
                   <span>Crunch Bombs</span>
                   <span>– 12</span>
                 </div>
@@ -278,7 +278,7 @@ function MenuPage() {
               {/* 4 */}
               <div className="bg-[#FBFBFB] p-6  shadow-sm">
 
-                <div className="flex font-public text-[32px] font-semibold text-[#000000]">
+                <div className="flex font-public text-[32px] font-medium text-[#000000]">
                   <span>Seasonal Golden Mix Bites</span>
                   <span>– 10</span>
                 </div>
@@ -292,7 +292,7 @@ function MenuPage() {
               {/* 5 */}
               <div className="bg-[#FBFBFB] p-6  shadow-sm">
 
-                <div className="flex font-public text-[32px] font-semibold text-[#000000]">
+                <div className="flex font-public text-[32px] font-medium text-[#000000]">
                   <span>Spring Rolls (Vegan)</span>
                   <span>– 8</span>
                 </div>
@@ -306,7 +306,7 @@ function MenuPage() {
               {/* 6 */}
               <div className="bg-[#FBFBFB] p-6  shadow-sm">
 
-                <div className="flex font-public text-[32px] font-semibold text-[#000000]">
+                <div className="flex font-public text-[32px] font-medium text-[#000000]">
                   <span>Mini Caprese Skewers (2 pcs)</span>
                   <span>– 9</span>
                 </div>
@@ -332,7 +332,7 @@ function MenuPage() {
               {/* 1 */}
               <div className="bg-[#FBFBFB] p-6  shadow-sm">
 
-                <div className="flex font-public text-[32px] font-semibold text-[#000000]">
+                <div className="flex font-public text-[32px] font-medium text-[#000000]">
                   <span>Spring Rolls (Vegan)</span>
                   <span>– 8</span>
                 </div>
@@ -346,7 +346,7 @@ function MenuPage() {
               {/* 2 */}
               <div className="bg-[#FBFBFB] p-6  shadow-sm">
 
-                <div className="flex font-public text-[32px] font-semibold text-[#000000]">
+                <div className="flex font-public text-[32px] font-medium text-[#000000]">
                   <span>Mini Caprese Skewers (2 pcs)</span>
                   <span>– 9</span>
                 </div>
@@ -360,7 +360,7 @@ function MenuPage() {
               {/* 3 */}
               <div className="bg-[#FBFBFB] p-6  shadow-sm">
 
-                <div className="flex font-public text-[32px] font-semibold text-[#000000]">
+                <div className="flex font-public text-[32px] font-medium text-[#000000]">
                   <span>Crunch Bombs</span>
                   <span>– 12</span>
                 </div>
@@ -374,7 +374,7 @@ function MenuPage() {
               {/* 4 */}
               <div className="bg-[#FBFBFB] p-6  shadow-sm">
 
-                <div className="flex font-public text-[32px] font-semibold text-[#000000]">
+                <div className="flex font-public text-[32px] font-medium text-[#000000]">
                   <span>Seasonal Golden Mix Bites</span>
                   <span>– 10</span>
                 </div>
@@ -388,7 +388,7 @@ function MenuPage() {
               {/* 5 */}
               <div className="bg-[#FBFBFB] p-6  shadow-sm">
 
-                <div className="flex font-public text-[32px] font-semibold text-[#000000]">
+                <div className="flex font-public text-[32px] font-medium text-[#000000]">
                   <span>Spring Rolls (Vegan)</span>
                   <span>– 8</span>
                 </div>
@@ -402,7 +402,7 @@ function MenuPage() {
               {/* 6 */}
               <div className="bg-[#FBFBFB] p-6  shadow-sm">
 
-                <div className="flex font-public text-[32px] font-semibold text-[#000000]">
+                <div className="flex font-public text-[32px] font-medium text-[#000000]">
                   <span>Mini Caprese Skewers (2 pcs)</span>
                   <span>– 9</span>
                 </div>
