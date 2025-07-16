@@ -1,31 +1,30 @@
-
-
-
 import { useState } from "react";
-import { FaStar, FaArrowRight, FaPlus } from "react-icons/fa";
-import { MdOutlineArrowOutward } from "react-icons/md";
-
+import { FaPlus } from "react-icons/fa";
+import { IoMdStar } from "react-icons/io";
+import { BsArrowUpRight } from "react-icons/bs";
+import { VscStarHalf } from "react-icons/vsc";
 
 const dishes = [
   {
     title: "Foie Gras Torchon",
     price: "$50.42",
-    rating: 5,
+    rating: 4,
+
     image: "/menu/4.png",
-    desc: "Balanced & flavor-rich selections for plant-based and mindful eaters.",
+    desc: "Flavor Harmony.",
   },
   {
     title: "Herb-Infused Bliss",
     price: "$30.12",
     rating: 4,
     image: "/menu/3.png",
-    desc: "Balanced & flavor-rich selections for plant-based and mindful eaters.",
+    desc: "Aromatic Herbs.",
   },
   {
     title: "Smoky Essie",
     price: "$50.42",
-    rating: 5,
-    desc: "Balanced & flavor-rich selections for plant-based and mindful eaters.",
+    rating: 4,
+    desc: "Grilled Delights.",
     image: "/menu/2.png",
   },
   {
@@ -33,67 +32,77 @@ const dishes = [
     price: null,
     rating: null,
     image: null,
-    desc: "Celebrated seasonal picks from our chef curated to balance flavor and freshness.",
+    desc: "Discover the chef’s personal favorites in this exclusive selection of signature dishes. Each  reflects the chef's passion .",
   },
   {
     title: "Margherita",
     price: "$19–27",
-    rating: 5,
+    rating: 4,
     image: "/menu/1.png",
-    desc: "Balanced & flavor-rich selections for plant-based and mindful eaters.",
+    desc: "A timeless favorite.",
   },
   {
     title: "Vegan & Vegetarian",
     price: null,
     rating: null,
     image: null,
-    desc: "Balanced & flavor-rich selections for plant-based and mindful eaters.",
+    desc: "Enjoy a variety of flavorful and innovative dishes that cater to plant-based diets. Our vegan and vegetarian options.",
   },
 ];
 
 const MenuShowcase = () => {
-  const tabs = ["All", "Small Plates", "Appetizers", "Special Sides", "Desserts"];
+  const tabs = [
+    "All",
+    "Small Plates",
+    "Appetizers",
+    "Special Sides",
+    "Desserts",
+  ];
   const [activeTab, setActiveTab] = useState("All");
 
   return (
     <section className="bg-black text-white py-24 px-6 md:px-32 font-serif">
       {/* Heading */}
       <div className="flex flex-col md:flex-row justify-between items-center mb-10">
-        <h2 className="text-3xl md:text-5xl font-bold leading-tight text-center md:text-left mb-6 md:mb-0">
+        <h2 className="text-3xl lg:text-[70px] md:text-5xl font-bold leading-tight text-center md:text-left mb-6 md:mb-0 font-lora">
           It's not just a meal, <br className="hidden md:block" />
           it's an experience
         </h2>
-        <button className="border border-white px-5 py-2 rounded-full text-sm hover:bg-white hover:text-black transition">
-          View Menu
+        <button className="border border-white px-[30px] py-[12px] rounded-full text-sm bg-white text-black transition font-public">
+          View All Menu
         </button>
       </div>
 
       {/* Category Buttons */}
       <div className="flex flex-wrap lg:gap-28 gap-8 justify-center w-full mb-10">
-        <button className="px-9 py-3 rounded-2xl bg-white text-black text-lg font-medium">
+        <button className="px-9 py-3 rounded-2xl bg-[#111111] text-lg font-medium font-public">
           Elite Dining Experience
-          <p className="text-xs">For Connoisseurs</p>
+          <p className="text-xs text-[#9F9F9F] font-public">For Connoisseurs</p>
         </button>
-        <button className="px-17 py-3 rounded-2xl border border-gray-500 text-lg">
+        <button className="px-17 py-3 rounded-2xl border border-gray-500 text-lg font-public">
           Essence of Flavor
-          <p className="text-xs">Signature Selections</p>
+          <p className="text-xs text-[#9F9F9F] font-public">
+            Signature Selections
+          </p>
         </button>
-        <button className="px-6 py-3 rounded-2xl border border-gray-500 text-lg">
+        <button className="px-6 py-3 rounded-2xl border border-gray-500 text-lg font-public">
           Culinary Masterpieces Unveiled
-          <p className="text-xs">Artisan Creations</p>
+          <p className="text-xs text-[#9F9F9F] font-public">
+            Artisan Creations
+          </p>
         </button>
       </div>
 
       {/* Filter Tabs */}
-      <div className="flex flex-wrap gap-6 justify-center mb-10 text-sm bg-[#161616] p-2 rounded-full">
+      <div className="flex flex-wrap gap-6 justify-center mb-10 text-sm bg-[#161616] p-2 rounded-full ">
         {tabs.map((tab) => (
           <button
             key={tab}
             onClick={() => setActiveTab(tab)}
             className={`px-4 py-1 rounded-full transition ${
               activeTab === tab
-                ? "bg-white text-black"
-                : "border border-gray-500 text-white hover:bg-white hover:text-black"
+                ? "bg-white text-[#242424]"
+                : "border border-gray-500 text-[#69634E] hover:bg-white hover:text-black"
             }`}
           >
             {tab}
@@ -106,49 +115,62 @@ const MenuShowcase = () => {
         {dishes.map((dish, i) => (
           <div
             key={i}
-            className="bg-[#0f0f0f] rounded-2xl relative group overflow-visible z-0"
+            className="bg-[#0f0f0f] rounded-2xl relative group overflow-visible z-0 "
           >
             {/* Top Arrow */}
-            <MdOutlineArrowOutward className="absolute top-4 right-4 text-white bg-black/40 rounded-full p-1 text-2xl opacity-100 transition z-20" />
+            <BsArrowUpRight className="absolute top-4 right-4 text-white rounded-full p-1 text-3xl opacity-100 transition z-20" />
 
             {/* Image or Placeholder */}
-           <div className="flex justify-center items-center relative min-h-[220px]">
-  {dish.image ? (
-    <img
-      src={dish.image}
-      alt={dish.title}
-      className="w-[70%] h-auto object-contain rounded-xl shadow-md -top-6 z-10 transition-transform duration-300 group-hover:scale-125"
-    />
-  ) : (
-    <div className="flex flex-col justify-center items-center text-center h-full text-gray-400">
-      <h3 className="text-white lg:mt-42 text-lg font-bold">{dish.title}</h3>
-      <h3 className="text-white text-sm px-4 mt-2 font-semibold">{dish.desc}</h3>
-      <div className="mt-6">
-        <FaPlus className="text-black bg-white rounded-full p-3 text-4xl active:scale-110" />
-      </div>
-    </div>
-  )}
-</div>
-
+            <div className="flex justify-center items-center  relative min-h-[220px] ">
+              
+              {dish.image ? (
+                <img
+                  src={dish.image}
+                  alt={dish.title}
+                  className="w-[70%] h-auto object-contain rounded-xl shadow-md -top-6 z-10 transition-transform duration-300 group-hover:scale-125 ]"
+                />
+              ) : (
+                <div className="flex flex-col justify-center items-center text-center h-full text-gray-400">
+                  <h3 className="text-white lg:mt-42 text-[30px] font-bold font-public">
+                    {dish.title}
+                  </h3>
+                  <h3 className="text-[#9F9F9F] text-[16px] px-4 mt-2 font-semibold font-public">
+                    {dish.desc}
+                  </h3>
+                  <div className="mt-6">
+                    <FaPlus className="text-black bg-white rounded-full p-3 text-4xl active:scale-110" />
+                  </div>
+                </div>
+              )}
+            </div>
 
             {/* Info Section */}
             {dish.image && (
               <div className="px-5 py-4 rounded-b-2xl flex flex-col gap-2">
-                <h3 className="text-white text-base font-semibold">{dish.title}</h3>
+                <h3 className="text-white text-base font-semibold font-public text-[30px]">
+                  {dish.title}
+                </h3>
                 {dish.desc && (
-                  <p className="text-gray-400 text-sm leading-snug">
+                  <p className="text-gray-400 text-sm leading-snug font-public">
                     {dish.desc}
                   </p>
                 )}
                 <div className="flex items-center justify-between mt-2">
                   {/* Rating */}
+
                   {dish.rating ? (
-                    <div className="flex gap-1 text-yellow-400 text-sm">
-                      {Array(dish.rating)
-                        .fill(0)
-                        .map((_, idx) => (
-                          <FaStar key={idx} />
-                        ))}
+                    <div className="flex gap-1 text-[#B88E00] text-lg">
+                      {Array.from({ length: 5 }, (_, idx) => {
+                        const fullStars = Math.floor(dish.rating);
+                        const isHalf = dish.rating - fullStars >= 0.5;
+                        if (idx < fullStars) {
+                          return <IoMdStar key={idx} />;
+                        } else if (idx === fullStars && isHalf) {
+                          return <VscStarHalf key={idx} />;
+                        } else {
+                          return <VscStarHalf key={idx} />;
+                        }
+                      })}
                     </div>
                   ) : (
                     <span />
@@ -156,7 +178,7 @@ const MenuShowcase = () => {
 
                   {/* Price */}
                   {dish.price && (
-                    <p className="text-white text-2xl font-semibold">
+                    <p className="text-white text-[28px] font-semibold font-public">
                       {dish.price}
                     </p>
                   )}

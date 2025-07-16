@@ -9,6 +9,7 @@ import AboutPage from "../Pages/AboutPage";
 import MenuPage from "../Pages/MenuPage";
 import Contactus from "../Pages/Contactus";
 import Reservation from "../Pages/Reservation";
+import Food from "../Pages/Food";
 
 const routes = createBrowserRouter([
   {
@@ -30,6 +31,10 @@ const routes = createBrowserRouter([
   {
     path: '/reservation',
     element: <Reservation />
+  },
+  {
+    path: '/food',
+    element: <Food />
   },
   
   {

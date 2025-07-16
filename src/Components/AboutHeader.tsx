@@ -19,10 +19,9 @@ const AboutHeaders = () => {
 
       {/* Centered Text */}
       <div className="relative z-20 flex items-center justify-center text-center h-[calc(100vh-60px)] px-4">
-        <h1 className="text-4xl md:text-6xl font-extrabold text-[#CFC39B]">
+        <h1 className="text-4xl lg:text-[124.75px] md:text-6xl font-semibold text-[#CFC39B] font-lora ">
           
           About
-          <br />
           <br />
           Amy Grill & Graze
 

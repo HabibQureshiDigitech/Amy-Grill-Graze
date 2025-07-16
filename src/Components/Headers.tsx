@@ -10,7 +10,7 @@ const Headers = () => {
 
 
 
-
+  
   return (
     <section className="relative w-full min-h-screen overflow-hidden font-serif text-white">
       {/* Background Video */}
@@ -36,16 +36,16 @@ const Headers = () => {
       <div className="relative z-20 max-w-7xl mx-auto px-6 pt-20 md:pt-15 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
         {/* Left Text */}
         <div className="space-y-6">
-          <p className="text-sm text-yellow-100 tracking-wider">
+          <p className="text-[#CFC39B] text-[20px] tracking-wider text-lora">
             Savor the Extraordinary _____________
           </p>
-          <h1 className="text-4xl sm:text-5xl md:text-5xl font-extrabold leading-tight text-[#CFC39B]">
+          <h1 className="text-4xl lg:text-[70px]  sm:text-5xl md:text-5xl font-semibold leading-tight text-[#CFC39B] text-lora">
             A Symphony <span className="text-white">of</span>
           </h1>
-          <h1 className="text-4xl sm:text-5xl md:text-5xl font-extrabold leading-tight">
+          <h1 className="text-4xl sm:text-5xl md:text-5xl font-extrabold leading-tight text-lora">
             Taste <span className="italic underline">& Elegance</span>
           </h1>
-          <p className="text-gray-300 text-base max-w-md lg:ml-44">
+          <p className="text-gray-300 text-base max-w-md lg:ml-44 font-public">
             Discover the perfect harmony between indulgent flavors and
             unparalleled elegance. Each dish at our restaurant is a symphony
             crafted to captivate all your senses.
@@ -54,7 +54,7 @@ const Headers = () => {
             <div className="flex items-center gap-1 text-white text-sm">
               <span className='rounded-full border h-9 w-9 border-white py-1 px-3'>1</span>/<span>5</span>
             </div>
-            <button className="underline text-sm text-white active:scale-110 transition flex">
+            <button className="underline text-sm text-[#FFFDF4] active:scale-110 transition flex font-public">
               <MdOutlineMenuOpen className="mt-0.5 mr-1 text-lg text-[#CFC39B]" />
               Make a Reservation
             </button>
@@ -80,10 +80,10 @@ const Headers = () => {
       className="w-13 h-13 rounded-full object-cover"
     />
     <div className="flex-1">
-      <p className="text-white text-sm font-semibold">
+      <p className="text-white text-sm font-semibold text-[22px] font-public">
         Enjoy our iconic dishes anytime, anywhere.
       </p>
-      <p className="text-gray-400 text-xs">
+      <p className=" text-[#9F9F9F] font-public text-[16px]">
         Bringing the flavors of our grill home to you.
       </p>
     </div>
@@ -92,7 +92,7 @@ const Headers = () => {
 
   {/* Right Button - moved to left side */}
   <div className="flex items-center justify-center bg-transparent w-full px-4 py-3">
-  <button className="border rounded-tl-2xl rounded-br-2xl border-white text-sm sm:text-md px-4 sm:px-5 py-2 rounded hover:bg-white hover:text-black transition">
+  <button className="border rounded-tl-2xl rounded-br-2xl border-white text-[14px] text-[ #FFFDF4] sm:text-md px-4 sm:px-5 py-2 rounded hover:bg-white hover:text-black transition">
     Join our VIP Club
   </button>
 </div>
