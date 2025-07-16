@@ -3,7 +3,7 @@ const HistorySection = () => {
     <section className="bg-black text-white py-16 px-6 md:px-20">
       {/* History Block */}
       <div className="flex flex-col md:flex-row-reverse items-center gap-10 mb-16">
-        <div className="relative w-full md:w-1/2 h-[300px] md:h-[400px] rounded-xl overflow-hidden shadow-lg">
+        <div className="relative w-full md:w-1/2 lg:h-[700px] md:h-[400px] rounded-xl overflow-hidden shadow-lg">
           <img
             src="/about/1.png"
             alt="Restaurant Interior"
@@ -33,7 +33,7 @@ const HistorySection = () => {
 
       {/* Amy Grill Block */}
       <div className="flex flex-col md:flex-row items-center gap-10">
-        <div className="relative w-full md:w-1/2 h-[300px] md:h-[400px] rounded-xl overflow-hidden shadow-lg">
+        <div className="relative w-full md:w-1/2 lg:h-[700px] md:h-[400px] rounded-xl overflow-hidden shadow-lg">
           <img
             src="/about/2.jpg"
             alt="Steak Dish"

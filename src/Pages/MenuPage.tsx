@@ -1,4 +1,5 @@
 import { useState } from "react";
+
 import NavbarLinks from "../Components/NavbarLinks";
 
 function MenuPage() {
