@@ -1,95 +1,378 @@
 import { useState } from "react";
-
 import NavbarLinks from "../Components/NavbarLinks";
+import { IoMenu } from "react-icons/io5";
+import { IoIosArrowDropleft, IoIosArrowDropright } from "react-icons/io";
+import Footer from "../Components/Footer";
 
 function MenuPage() {
-
   const allMenuData = {
-    
-    "Amy’s Signature Items": [
-      "Amy’s Dynamic Tandoori (2 pcs) – 11",
-      "Grazers Special Skewers – (Seasoned Mix) (2 pcs) – 10",
-      "Choco & Buzzer Bites (4 pcs) – 12",
-    ],
-    "Starters & Small Plates": [
-      "Spring Rolls (4 pcs) – 8",
-      "Crunch Bites – 10",
-      "Spring Rolls (Veg) – 8",
-      "Mini Korean Skewers (2 pcs) – 9",
-      "Seasoned Golden Mix Bites – 10",
-      "Mini Chinese Skewers (2 pcs) – 9",
-    ],
-    "Comfort Soups": [
-      "Hot & Sour Soup – 7",
-      "Corn Soup – 6",
-      "Thai Soup – 8",
-      "Mini Soup Platter – 9",
-    ],
-    "Amy Artisan Pizza": [
-      "Classic Margherita – 11",
-      "Spicy Chicken – 12",
-      "Veggie Delight – 10",
-      "Double Cheese Burst – 13",
-    ],
-    "Pasta Favorites": [
-      "Creamy Alfredo – 12",
-      "Spicy Arrabiata – 11",
-      "Garlic Pesto – 10",
-      "Pink Sauce Pasta – 13",
-    ],
+    "Starters & Small Plates": [],
+    "Comfort Soups": [],
+    "Amy Artisan Pizzas": [],
+    "Pasta Favorites": [],
+    "Signature Salads & Bowls": [],
+    "Burger Meals": [],
+    "Signature Sandwiches": [],
+    "Focaccia Sandwiches": [],
+    "Grilled Platters": [],
+    "Signature Curries": [],
   };
 
   const categories = Object.keys(allMenuData);
-  const [activeCategory, setActiveCategory] = useState(categories[0]);
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const menuItems = [
+    {
+      title: "Amy’s Dynamite Tacos (2 pcs)",
+      price: "11",
+      description:
+        "Crispy rolls stuffed with seasoned noodles and vegetables, served with sweet & sour sauce.",
+    },
+    {
+      title: "Graze Special Momos – Steamed 10 / Fried 10",
+      price: "",
+      description:
+        "Juicy dumplings filled with chicken, shrimp, or veggies, served with a bold soy chili dipping sauce.",
+    },
+    {
+      title: "Glaze & Graze Wings (6/10/15/20 pcs)",
+      price: "12/20/28/38",
+      description:
+        "Crispy wings tossed in your choice of bold flavors like : plain, Noma Sauce, Buffalo, BBQ, Garlic, Garlic Parmesan, Sweet Chili, Mango habanero, sweet Teriyaki, Mix buffalo & BBQ, Honey garlic. Mumbo Sauce. Lemon paper, lemon paper sauce, Nashville hot sauce.",
+    },
+  ];
 
   return (
-    <div className="bg-black text-white">
+    <div className="bg-black text-white min-h-screen relative">
+      {/* Navbar */}
       <NavbarLinks />
-      <div className="relative z-20 flex items-center justify-center text-center h-[calc(100vh-60px)] px-4">
 
-        <h1 className="text-4xl md:text-6xl lg:text-[124.75px] font-semibold text-[#CFC39B] font-lora"> Main
-
-          <br />
-          <p className="text-[#FFFDF4] text-[24px] mt-2 font-public">
-            Perfect to share or start your flavor journey.
-          </p>
+      {/* Hero Section */}
+      <div className="relative z-10 flex flex-col items-center justify-center text-center h-[calc(100vh-60px)] px-4">
+        <h1 className="text-4xl md:text-6xl font-extrabold text-[#CFC39B]">
+          Main
         </h1>
+        <p className="text-white text-sm mt-2">
+          Perfect to share or start your flavor journey.
+        </p>
       </div>
 
-      <section className="bg-white text-black py-12 px-4 md:px-16">
-        {/* Filter Tabs */}
-        <div className="flex flex-wrap justify-center gap-4 mb-10">
-          {categories.map((category) => (
-            <button
-              key={category}
-              onClick={() => setActiveCategory(category)}
-              className={`px-4 py-2 rounded-full border font-medium transition ${
-                activeCategory === category
-                  ? "bg-black text-white"
-                  : "bg-gray-100 text-black hover:bg-gray-200"
-              }`}
-            >
-              {category}
-            </button>
-          ))}
-        </div>
+      {/* Menu Section */}
+      <section className="bg-black text-white px-4 sm:px-6 md:px-12 py-10 md:py-6 relative">
+        <div className="max-w-7xl mx-auto relative">
+          {/* Top Menu Bar */}
+          <div className="bg-white shadow px-4 py-2 flex items-center justify-between rounded relative">
+            {/* Left: Menu Icon */}
+            <div className="relative">
+              <button
+                className="p-2 hover:bg-gray-100 rounded"
+                onClick={() => setMenuOpen(!menuOpen)}
+              >
+                <IoMenu className="text-black" size={20} />
+              </button>
 
-        {/* Menu Items */}
-        <div className="text-center mb-6">
-          <h2 className="text-3xl font-bold">{activeCategory}</h2>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {allMenuData[activeCategory].map((item, idx) => (
-            <div
-              key={idx}
-              className="bg-gray-100 p-4 rounded-md shadow-sm hover:bg-gray-200 transition"
-            >
-              {item}
+              {/* Dropdown */}
+              {menuOpen && (
+                <div className="absolute left-0 mt-2 w-64 max-h-72 overflow-y-auto bg-white text-black shadow-md rounded z-50">
+                  <ul className="p-2 font-semibold text-sm space-y-2">
+                    {categories.map((item, index) => (
+                      <li
+                        key={index}
+                        className="hover:bg-gray-100 px-3 py-2 border-b cursor-pointer"
+                        onClick={() => setMenuOpen(false)}
+                      >
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
             </div>
-          ))}
+
+            {/* Center: Scrollable Category Nav */}
+            <div className="flex-1 flex justify-center gap-4 text-xs md:text-sm text-black font-medium whitespace-nowrap overflow-x-auto scrollbar-hide px-4">
+              {categories.slice(0, 5).map((category, index) => (
+                <a href="#" key={index} className="hover:text-yellow-600">
+                  {category}
+                </a>
+              ))}
+            </div>
+
+            {/* Right: Arrows */}
+            <div className="flex items-center gap-2">
+              <button className="p-2 hover:bg-gray-100 rounded">
+                <IoIosArrowDropleft className="text-black" size={20} />
+              </button>
+              <button className="p-2 hover:bg-gray-100 rounded">
+                <IoIosArrowDropright className="text-black" size={20} />
+              </button>
+            </div>
+          </div>
+
+          {/* Existing Menu Cards */}
+          <div className="bg-white p-6 mt-5 flex flex-col gap-4">
+            {menuItems.map((item, index) => (
+              <div key={index} className="bg-[#FBFBFB]  shadow-sm p-6">
+                <div className="text-lg font-semibold text-gray-900 flex justify-between flex-wrap">
+                  <span>{item.title}</span>
+                  {item.price && <span>– {item.price}</span>}
+                </div>
+                <p className="text-sm text-[#9F9F9F] mt-1">
+                  {item.description}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          {/* New Section: Starters & Small Plates */}
+          <div className="mt-10 bg-white p-6">
+            <h2 className="text-2xl font-semibold text-black mb-6">
+              Starters & Small Plates
+            </h2>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {/* 1 */}
+              <div className="bg-[#FBFBFB] p-6  shadow-sm">
+                <div className="flex justify-between text-gray-900 font-semibold">
+                  <span>Spring Rolls (Vegan)</span>
+                  <span>– 8</span>
+                </div>
+                <p className="text-sm text-[#9F9F9F] mt-1">
+                  Crispy rolls stuffed with seasoned noodles and vegetables,
+                  served with sweet & sour sauce.
+                </p>
+              </div>
+
+              {/* 2 */}
+              <div className="bg-[#FBFBFB] p-6  shadow-sm">
+                <div className="flex justify-between text-gray-900 font-semibold">
+                  <span>Mini Caprese Skewers (2 pcs)</span>
+                  <span>– 9</span>
+                </div>
+                <p className="text-sm text-[#9F9F9F] mt-1">
+                  Cherry tomatoes, fresh mozzarella, and basil skewers drizzled
+                  with tangy balsamic glaze.
+                </p>
+              </div>
+
+              {/* 3 */}
+              <div className="bg-[#FBFBFB] p-6  shadow-sm">
+                <div className="flex justify-between text-gray-900 font-semibold">
+                  <span>Crunch Bombs</span>
+                  <span>– 12</span>
+                </div>
+                <p className="text-sm text-[#9F9F9F] mt-1">
+                  Spiced chicken and beef meatballs served crispy with a cool
+                  mint yogurt dip.
+                </p>
+              </div>
+
+              {/* 4 */}
+              <div className="bg-[#FBFBFB] p-6  shadow-sm">
+                <div className="flex justify-between text-gray-900 font-semibold">
+                  <span>Seasonal Golden Mix Bites</span>
+                  <span>– 10</span>
+                </div>
+                <p className="text-sm text-[#9F9F9F] mt-1">
+                  Chickpea-battered mixed veggies fried to golden perfection,
+                  with creamy house dressing.
+                </p>
+              </div>
+
+              {/* 5 */}
+              <div className="bg-[#FBFBFB] p-6  shadow-sm">
+                <div className="flex justify-between text-gray-900 font-semibold">
+                  <span>Spring Rolls (Vegan)</span>
+                  <span>– 8</span>
+                </div>
+                <p className="text-sm text-[#9F9F9F] mt-1">
+                  Crispy rolls stuffed with seasoned noodles and vegetables,
+                  served with sweet & sour sauce.
+                </p>
+              </div>
+
+              {/* 6 */}
+              <div className="bg-[#FBFBFB] p-6  shadow-sm">
+                <div className="flex justify-between text-gray-900 font-semibold">
+                  <span>Mini Caprese Skewers (2 pcs)</span>
+                  <span>– 9</span>
+                </div>
+                <p className="text-sm text-[#9F9F9F] mt-1">
+                  Cherry tomatoes, fresh mozzarella, and basil skewers drizzled
+                  with tangy balsamic glaze.
+                </p>
+              </div>
+            </div>
+          </div>
+
+
+          {/* New Section: Starters & Small Plates */}
+          <div className="mt-10 bg-white p-6">
+            <h2 className="text-2xl font-semibold text-black mb-6">
+              Comfrot Soups
+            </h2>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {/* 1 */}
+              <div className="bg-[#FBFBFB] p-6  shadow-sm">
+                <div className="flex justify-between text-gray-900 font-semibold">
+                  <span>Spring Rolls (Vegan)</span>
+                  <span>– 8</span>
+                </div>
+                <p className="text-sm text-[#9F9F9F] mt-1">
+                  Crispy rolls stuffed with seasoned noodles and vegetables,
+                  served with sweet & sour sauce.
+                </p>
+              </div>
+
+              {/* 2 */}
+              <div className="bg-[#FBFBFB] p-6  shadow-sm">
+                <div className="flex justify-between text-gray-900 font-semibold">
+                  <span>Mini Caprese Skewers (2 pcs)</span>
+                  <span>– 9</span>
+                </div>
+                <p className="text-sm text-[#9F9F9F] mt-1">
+                  Cherry tomatoes, fresh mozzarella, and basil skewers drizzled
+                  with tangy balsamic glaze.
+                </p>
+              </div>
+
+              {/* 3 */}
+              <div className="bg-[#FBFBFB] p-6  shadow-sm">
+                <div className="flex justify-between text-gray-900 font-semibold">
+                  <span>Crunch Bombs</span>
+                  <span>– 12</span>
+                </div>
+                <p className="text-sm text-[#9F9F9F] mt-1">
+                  Spiced chicken and beef meatballs served crispy with a cool
+                  mint yogurt dip.
+                </p>
+              </div>
+
+              {/* 4 */}
+              <div className="bg-[#FBFBFB] p-6  shadow-sm">
+                <div className="flex justify-between text-gray-900 font-semibold">
+                  <span>Seasonal Golden Mix Bites</span>
+                  <span>– 10</span>
+                </div>
+                <p className="text-sm text-[#9F9F9F] mt-1">
+                  Chickpea-battered mixed veggies fried to golden perfection,
+                  with creamy house dressing.
+                </p>
+              </div>
+
+              {/* 5 */}
+              <div className="bg-[#FBFBFB] p-6  shadow-sm">
+                <div className="flex justify-between text-gray-900 font-semibold">
+                  <span>Spring Rolls (Vegan)</span>
+                  <span>– 8</span>
+                </div>
+                <p className="text-sm text-[#9F9F9F] mt-1">
+                  Crispy rolls stuffed with seasoned noodles and vegetables,
+                  served with sweet & sour sauce.
+                </p>
+              </div>
+
+              {/* 6 */}
+              <div className="bg-[#FBFBFB] p-6  shadow-sm">
+                <div className="flex justify-between text-gray-900 font-semibold">
+                  <span>Mini Caprese Skewers (2 pcs)</span>
+                  <span>– 9</span>
+                </div>
+                <p className="text-sm text-[#9F9F9F] mt-1">
+                  Cherry tomatoes, fresh mozzarella, and basil skewers drizzled
+                  with tangy balsamic glaze.
+                </p>
+              </div>
+            </div>
+          </div>
+
+
+          {/* New Section: Starters & Small Plates */}
+          <div className="mt-10 bg-white p-6">
+            <h2 className="text-2xl font-semibold text-black mb-6">
+              Amy Artisan Pizzas
+            </h2>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {/* 1 */}
+              <div className="bg-[#FBFBFB] p-6  shadow-sm">
+                <div className="flex justify-between text-gray-900 font-semibold">
+                  <span>Spring Rolls (Vegan)</span>
+                  <span>– 8</span>
+                </div>
+                <p className="text-sm text-[#9F9F9F] mt-1">
+                  Crispy rolls stuffed with seasoned noodles and vegetables,
+                  served with sweet & sour sauce.
+                </p>
+              </div>
+
+              {/* 2 */}
+              <div className="bg-[#FBFBFB] p-6  shadow-sm">
+                <div className="flex justify-between text-gray-900 font-semibold">
+                  <span>Mini Caprese Skewers (2 pcs)</span>
+                  <span>– 9</span>
+                </div>
+                <p className="text-sm text-[#9F9F9F] mt-1">
+                  Cherry tomatoes, fresh mozzarella, and basil skewers drizzled
+                  with tangy balsamic glaze.
+                </p>
+              </div>
+
+              {/* 3 */}
+              <div className="bg-[#FBFBFB] p-6  shadow-sm">
+                <div className="flex justify-between text-gray-900 font-semibold">
+                  <span>Crunch Bombs</span>
+                  <span>– 12</span>
+                </div>
+                <p className="text-sm text-[#9F9F9F] mt-1">
+                  Spiced chicken and beef meatballs served crispy with a cool
+                  mint yogurt dip.
+                </p>
+              </div>
+
+              {/* 4 */}
+              <div className="bg-[#FBFBFB] p-6  shadow-sm">
+                <div className="flex justify-between text-gray-900 font-semibold">
+                  <span>Seasonal Golden Mix Bites</span>
+                  <span>– 10</span>
+                </div>
+                <p className="text-sm text-[#9F9F9F] mt-1">
+                  Chickpea-battered mixed veggies fried to golden perfection,
+                  with creamy house dressing.
+                </p>
+              </div>
+
+              {/* 5 */}
+              <div className="bg-[#FBFBFB] p-6  shadow-sm">
+                <div className="flex justify-between text-gray-900 font-semibold">
+                  <span>Spring Rolls (Vegan)</span>
+                  <span>– 8</span>
+                </div>
+                <p className="text-sm text-[#9F9F9F] mt-1">
+                  Crispy rolls stuffed with seasoned noodles and vegetables,
+                  served with sweet & sour sauce.
+                </p>
+              </div>
+
+              {/* 6 */}
+              <div className="bg-[#FBFBFB] p-6  shadow-sm">
+                <div className="flex justify-between text-gray-900 font-semibold">
+                  <span>Mini Caprese Skewers (2 pcs)</span>
+                  <span>– 9</span>
+                </div>
+                <p className="text-sm text-[#9F9F9F] mt-1">
+                  Cherry tomatoes, fresh mozzarella, and basil skewers drizzled
+                  with tangy balsamic glaze.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
+
+<Footer />
+
     </div>
   );
 }
