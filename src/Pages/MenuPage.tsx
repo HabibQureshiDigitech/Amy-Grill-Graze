@@ -21,7 +21,7 @@ function MenuPage() {
   const categories = Object.keys(allMenuData);
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const categoryRef = useRef(null);
+  const categoryRef = useRef<any>(null);
 
   const scrollLeft = () => {
     if (categoryRef.current) {
