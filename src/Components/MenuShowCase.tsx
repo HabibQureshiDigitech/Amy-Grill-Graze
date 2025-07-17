@@ -9,7 +9,6 @@ const dishes = [
     title: "Foie Gras Torchon",
     price: "$50.42",
     rating: 4,
-
     image: "/menu/4.png",
     desc: "Flavor Harmony.",
   },
@@ -32,7 +31,7 @@ const dishes = [
     price: null,
     rating: null,
     image: null,
-    desc: "Discover the chef’s personal favorites in this exclusive selection of signature dishes. Each  reflects the chef's passion .",
+    desc: "Discover the chef’s personal favorites.",
   },
   {
     title: "Margherita",
@@ -46,7 +45,7 @@ const dishes = [
     price: null,
     rating: null,
     image: null,
-    desc: "Enjoy a variety of flavorful and innovative dishes that cater to plant-based diets. Our vegan and vegetarian options.",
+    desc: "Vegan and vegetarian options.",
   },
 ];
 
@@ -86,7 +85,7 @@ const MenuShowcase = () => {
           </p>
         </button>
         <button className="px-6 py-3 rounded-2xl border border-gray-500 text-lg font-public">
-          Culinary Masterpieces Unveiled
+          Culinary Masterpieces
           <p className="text-xs text-[#9F9F9F] font-public">
             Artisan Creations
           </p>
@@ -110,84 +109,88 @@ const MenuShowcase = () => {
         ))}
       </div>
 
-      {/* Dishes Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {dishes.map((dish, i) => (
-          <div
-            key={i}
-            className="bg-[#0f0f0f] rounded-2xl relative group overflow-visible z-0 "
-          >
-            {/* Top Arrow */}
-            <BsArrowUpRight className="absolute top-4 right-4 text-white rounded-full p-1 text-3xl opacity-100 transition z-20" />
+      {/* Dishes or No Data */}
+      {activeTab === "All" ? (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {dishes.map((dish, i) => (
+            <div
+              key={i}
+              className="bg-[#0f0f0f] rounded-2xl relative group overflow-visible z-0 "
+            >
+              {/* Top Arrow */}
+              <BsArrowUpRight className="absolute top-4 right-4 text-white rounded-full p-1 text-3xl opacity-100 transition z-20" />
 
-            {/* Image or Placeholder */}
-            <div className="flex justify-center items-center  relative min-h-[220px] ">
-              
-              {dish.image ? (
-                <img
-                  src={dish.image}
-                  alt={dish.title}
-                  className="w-[70%] h-auto object-contain rounded-xl shadow-md -top-6 z-10 transition-transform duration-300 group-hover:scale-125 ]"
-                />
-              ) : (
-                <div className="flex flex-col justify-center items-center text-center h-full text-gray-400">
-                  <h3 className="text-white lg:mt-42 text-[30px] font-bold font-public">
+              {/* Image or Placeholder */}
+              <div className="flex justify-center items-center relative min-h-[220px]">
+                {dish.image ? (
+                  <img
+                    src={dish.image}
+                    alt={dish.title}
+                    className="w-[70%] h-auto object-contain rounded-xl shadow-md -top-6 z-10 transition-transform duration-300 group-hover:scale-125"
+                  />
+                ) : (
+                  <div className="flex flex-col justify-center items-center text-center h-full text-gray-400">
+                    <h3 className="text-white lg:mt-42 text-[30px] font-bold font-public">
+                      {dish.title}
+                    </h3>
+                    <h3 className="text-[#9F9F9F] text-[16px] px-4 mt-2 font-semibold font-public">
+                      {dish.desc}
+                    </h3>
+                    <div className="mt-6">
+                      <FaPlus className="text-black bg-white rounded-full p-3 text-4xl active:scale-110" />
+                    </div>
+                  </div>
+                )}
+              </div>
+
+              {/* Info Section */}
+              {dish.image && (
+                <div className="px-5 py-4 rounded-b-2xl flex flex-col gap-2">
+                  <h3 className="text-white text-base font-semibold font-public text-[30px]">
                     {dish.title}
                   </h3>
-                  <h3 className="text-[#9F9F9F] text-[16px] px-4 mt-2 font-semibold font-public">
-                    {dish.desc}
-                  </h3>
-                  <div className="mt-6">
-                    <FaPlus className="text-black bg-white rounded-full p-3 text-4xl active:scale-110" />
+                  {dish.desc && (
+                    <p className="text-gray-400 text-sm leading-snug font-public">
+                      {dish.desc}
+                    </p>
+                  )}
+                  <div className="flex items-center justify-between mt-2">
+                    {/* Rating */}
+                    {dish.rating ? (
+                      <div className="flex gap-1 text-[#B88E00] text-lg">
+                        {Array.from({ length: 5 }, (_, idx) => {
+                          const fullStars = Math.floor(dish.rating);
+                          const isHalf = dish.rating - fullStars >= 0.5;
+                          if (idx < fullStars) {
+                            return <IoMdStar key={idx} />;
+                          } else if (idx === fullStars && isHalf) {
+                            return <VscStarHalf key={idx} />;
+                          } else {
+                            return <VscStarHalf key={idx} />;
+                          }
+                        })}
+                      </div>
+                    ) : (
+                      <span />
+                    )}
+
+                    {/* Price */}
+                    {dish.price && (
+                      <p className="text-white text-[28px] font-semibold font-public">
+                        {dish.price}
+                      </p>
+                    )}
                   </div>
                 </div>
               )}
             </div>
-
-            {/* Info Section */}
-            {dish.image && (
-              <div className="px-5 py-4 rounded-b-2xl flex flex-col gap-2">
-                <h3 className="text-white text-base font-semibold font-public text-[30px]">
-                  {dish.title}
-                </h3>
-                {dish.desc && (
-                  <p className="text-gray-400 text-sm leading-snug font-public">
-                    {dish.desc}
-                  </p>
-                )}
-                <div className="flex items-center justify-between mt-2">
-                  {/* Rating */}
-
-                  {dish.rating ? (
-                    <div className="flex gap-1 text-[#B88E00] text-lg">
-                      {Array.from({ length: 5 }, (_, idx) => {
-                        const fullStars = Math.floor(dish.rating);
-                        const isHalf = dish.rating - fullStars >= 0.5;
-                        if (idx < fullStars) {
-                          return <IoMdStar key={idx} />;
-                        } else if (idx === fullStars && isHalf) {
-                          return <VscStarHalf key={idx} />;
-                        } else {
-                          return <VscStarHalf key={idx} />;
-                        }
-                      })}
-                    </div>
-                  ) : (
-                    <span />
-                  )}
-
-                  {/* Price */}
-                  {dish.price && (
-                    <p className="text-white text-[28px] font-semibold font-public">
-                      {dish.price}
-                    </p>
-                  )}
-                </div>
-              </div>
-            )}
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
+      ) : (
+        <div className="text-center text-gray-400 text-xl mt-20">
+          No data available
+        </div>
+      )}
     </section>
   );
 };

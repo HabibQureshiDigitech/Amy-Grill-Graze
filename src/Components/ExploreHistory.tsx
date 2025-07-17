@@ -7,7 +7,7 @@ export default function ExploreHistory() {
       <div className="flex flex-col gap-6 md:flex-row max-w-6xl mx-auto">
         {/* LEFT BIG CARD */}
         <div
-          className="relative flex-1 rounded-3xl p-6 sm:p-8 md:p-10 overflow-hidden flex flex-col text-white"
+          className="relative flex-1 rounded-3xl p-4 sm:p-8 md:p-10 overflow-hidden flex flex-col text-white"
           style={{
             backgroundImage: "url('/history/Subtract.png')",
             backgroundSize: "cover",
@@ -17,9 +17,9 @@ export default function ExploreHistory() {
           {/* Top Link */}
           <a
             href="#"
-            className="text-[20px] text-[#9F9F9F] underline inline-flex items-center gap-1 font-public "
+            className="text-[20px] text-[#9F9F9F] underline inline-flex items-center gap-1 -mt-6 mb-9 font-public "
           >
-            Explore Our History <FaArrowRightLong/>
+            Explore Our History <FaArrowRightLong />
           </a>
 
           {/* Headline */}
@@ -35,7 +35,7 @@ export default function ExploreHistory() {
           </button>
 
           {/* Read Testimonials Button */}
-          <button className="absolute bottom-2 right-4 px-4 py-2 active:scale-110 bg-[#FFFDF4] text-[#242424] text-xs sm:text-sm rounded-full font-public">
+          <button className="absolute bottom-2 right-2 px-4 py-2 active:scale-110 bg-[#FFFDF4] text-[#242424] text-xs sm:text-sm rounded-full font-public">
             Read Testimonials
           </button>
         </div>
@@ -43,10 +43,18 @@ export default function ExploreHistory() {
         {/* RIGHT SIDE CARDS */}
         <div className="flex flex-col gap-6 w-full md:w-1/3">
           {/* Top Right Card */}
-          <div className="relative  p-6 sm:p-7 md:p-8 flex flex-col gap-2" style={{ backgroundImage: 'url("/history/background.png")' }} >
-            <button className="absolute border h-8 w-8 rounded-full active:scale-110 border-white  top-4 right-4 text-lg p-1">< BsArrowUpRight /></button>
-            <h3 className="text-[14px] text-[#FFFDF4] font-public ">Meet the Chef</h3>
-            <h2 className="text-[20px] sm:text-xl font-normal font-public text-[#FFFDF4] ">
+          <div
+            className="relative p-6 sm:p-7 md:p-8 flex flex-col gap-2"
+            style={{ backgroundImage: 'url("/history/background.png")' }}
+          >
+            <button
+              className="absolute top-0 right-2 sm:-top-3 sm:right-3 border h-8 w-8 rounded-full active:scale-110 border-white text-lg p-1 flex items-center justify-center"
+            >
+              <BsArrowUpRight />
+            </button>
+
+            <h3 className="text-[14px] text-[#FFFDF4] font-public">Meet the Chef</h3>
+            <h2 className="text-[20px] sm:text-xl font-normal font-public text-[#FFFDF4]">
               Culinary Excellence
             </h2>
             <p className="text-[16px] sm:text-sm text-[#9F9F9F] font-public">
@@ -55,7 +63,8 @@ export default function ExploreHistory() {
             </p>
           </div>
 
-          
+
+
 
           {/* Bottom Right Card */}
           <div className="relative rounded-3xl overflow-hidden">
@@ -72,10 +81,10 @@ export default function ExploreHistory() {
                 At the crossroads of timeless culinary traditions and modern
                 creativity.
               </p>
-              <button className="self-end text-lg mt-2"><FaArrowRightLong/></button>
+              <button className="self-end text-lg mt-2"><FaArrowRightLong /></button>
             </div>
           </div>
-          
+
         </div>
       </div>
     </section>

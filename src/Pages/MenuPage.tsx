@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import NavbarLinks from "../Components/NavbarLinks";
 import { IoMenu } from "react-icons/io5";
 import { IoIosArrowDropleft, IoIosArrowDropright } from "react-icons/io";
@@ -20,6 +20,20 @@ function MenuPage() {
 
   const categories = Object.keys(allMenuData);
   const [menuOpen, setMenuOpen] = useState(false);
+
+  const categoryRef = useRef(null);
+
+  const scrollLeft = () => {
+    if (categoryRef.current) {
+      categoryRef.current.scrollBy({ left: -100, behavior: "smooth" });
+    }
+  };
+
+  const scrollRight = () => {
+    if (categoryRef.current) {
+      categoryRef.current.scrollBy({ left: 100, behavior: "smooth" });
+    }
+  };
 
   const menuItems = [
     {
@@ -59,9 +73,13 @@ function MenuPage() {
         </p>
       </div>
 
+
+
       {/* Menu Section */}
       <section className="bg-black text-white px-4 sm:px-6 md:px-12 py-10 md:py-6 relative">
         <div className="max-w-7xl mx-auto relative">
+
+
           {/* Top Menu Bar */}
           <div className="bg-white shadow px-4 py-2 flex items-center justify-between rounded relative">
             {/* Left: Menu Icon */}
@@ -92,9 +110,12 @@ function MenuPage() {
             </div>
 
             {/* Center: Scrollable Category Nav */}
-            <div className="flex-1 flex  gap-4 text-[19px] md:text-sm text-[#080808] font-semibold whitespace-nowrap overflow-x-auto scrollbar-hide px-4 font-public">
-              {categories.slice(0, 7).map((category, index) => (
-
+            <div
+              ref={categoryRef}
+              className="flex-1 flex gap-4 text-[19px] md:text-sm text-[#080808] font-semibold whitespace-nowrap overflow-x-auto px-4 font-public"
+              style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+            >
+              {categories.map((category, index) => (
                 <a href="#" key={index} className="hover:text-yellow-600">
                   {category}
                 </a>
@@ -103,14 +124,21 @@ function MenuPage() {
 
             {/* Right: Arrows */}
             <div className="flex items-center gap-2">
-              <button className="p-2 hover:bg-gray-100 rounded">
+              <button
+                onClick={scrollLeft}
+                className="p-2 hover:bg-gray-100 rounded"
+              >
                 <IoIosArrowDropleft className="text-black" size={20} />
               </button>
-              <button className="p-2 hover:bg-gray-100 rounded">
+              <button
+                onClick={scrollRight}
+                className="p-2 hover:bg-gray-100 rounded"
+              >
                 <IoIosArrowDropright className="text-black" size={20} />
               </button>
             </div>
           </div>
+
 
           {/* Existing Menu Cards */}
           <div className="bg-white p-6 mt-5 flex flex-col gap-4">
@@ -118,7 +146,7 @@ function MenuPage() {
               <div key={index} className="bg-[#FBFBFB]  shadow-sm p-6">
                 <div className="text-lg lg:text-[32px]  text-[#000000] font-medium flex flex-wrap font-public">
                   <span>{item.title}</span>
-                  {item.price  &&  <span> - {item.price} </span>}
+                  {item.price && <span> - {item.price} </span>}
                 </div>
                 <p className="text-[16px] font-normal text-[#9F9F9F] mt-1 font-public">
 
@@ -229,7 +257,7 @@ function MenuPage() {
 
             <h2 className="text-2xl lg:text-[43px] font-semibold text-[#000000] font-lora italic mb-6">
 
-              Comfrot Soups
+              Comfort Soups
             </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
