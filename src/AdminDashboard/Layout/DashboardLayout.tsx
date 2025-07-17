@@ -1,10 +1,9 @@
 import { useState, useEffect } from "react";
-import { HomeOutlined, InfoCircleOutlined, LogoutOutlined, MenuFoldOutlined, MenuUnfoldOutlined, ProductOutlined, QuestionCircleOutlined, SearchOutlined, SettingOutlined } from "@ant-design/icons";
+import { HomeOutlined, LogoutOutlined, MenuFoldOutlined, MenuUnfoldOutlined, ProductOutlined, SettingOutlined } from "@ant-design/icons";
 
-import { Input, Layout, Menu, theme, Dropdown , message } from "antd";
+import { Input, Layout, Menu, theme, Dropdown  } from "antd";
 import { Link, Outlet, useLocation, useNavigate } from "react-router-dom";
 import "../Css/Dashboard.css";
-import { Footer } from "antd/es/layout/layout";
 // import { useMutation } from "@tanstack/react-query";
 const { Header, Sider, Content } = Layout;
 
@@ -16,11 +15,11 @@ const DashboardLayout = () => {
   const [collapsed, setCollapsed] = useState(false);
   const [currentPage, setCurrentPage] = useState("");
   // const [showSearch, setShowSearch] = useState(false);
-  const [showSearch, setShowSearch] = useState(false);
+  // const [showSearch, setShowSearch] = useState(false);
 
-  const toggleSearch = () => {
-    setShowSearch(!showSearch);
-  };
+  // const toggleSearch = () => {
+  //   setShowSearch(!showSearch);
+  // };
     
  
    
