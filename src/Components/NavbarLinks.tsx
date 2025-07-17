@@ -14,7 +14,7 @@ function NavbarLinks() {
           <img src={Frame} alt="logo" className="h-10 md:h-12" />
           <ul className="hidden md:flex space-x-7 text-sm tracking-wide text-[#9F9F9F]">
             <li className="hover:text-white"><Link to="/">Home</Link></li>
-            <li className="hover:text-white"><Link to="/menu">Menu</Link></li>
+            <li className="hover:text-white"><Link to="/food">Menu</Link></li>
             <li className="hover:text-white"><Link to="/about">About</Link></li>
             <li className="hover:text-white"><Link to="/reservation">Reservation</Link></li>
           </ul>
