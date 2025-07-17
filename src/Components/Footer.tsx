@@ -20,23 +20,22 @@ const Footer = () => {
           <img src="../Maskgroup.png" alt="Logo" />
         </div>
 
-        <div className="flex flex-wrap gap-x-4 gap-y-1 lg:text-[20px] text-[17px]  text-[#9F9F9F] max-w-xl font-public">
+        <div className="flex flex-wrap gap-x-4 gap-y-1 lg:text-[20px]  text-[#9F9F9F] max-w-xl font-public">
         
-             <a href="#">Home</a>
+             <a href="/">Home</a>
              <span>/</span>
              <a href="#">Special Offers</a>
              <span>/</span>
              <a href="#">Blog</a>
-            
              <span>/</span>
-               <span className="" /> 
+               <span className="lg:w-full" /> 
             
-             <a href="#">About Us</a>
+             <a href="/about">About Us</a>
              <span>/</span>
              <a href="#">Payment & Delivery</a>
              <span>/</span>
-               <span className="" /> 
-             <a href="#">Contacts</a>
+               <span className="lg:w-full" /> 
+             <a href="contactus">Contacts</a>
         </div>
       </div>
 
