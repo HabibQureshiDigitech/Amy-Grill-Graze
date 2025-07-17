@@ -39,7 +39,7 @@ const Headers = () => {
           <p className="text-[#CFC39B] text-[20px] tracking-wider text-lora">
             Savor the Extraordinary _____________
           </p>
-          <h1 className="text-4xl lg:text-[70px]  sm:text-5xl md:text-5xl font-semibold leading-tight text-[#CFC39B] text-lora">
+          <h1 className="text-4xl lg:text-[60px]  sm:text-5xl md:text-5xl font-semibold leading-tight text-[#CFC39B] text-lora">
             A Symphony <span className="text-white">of</span>
           </h1>
           <h1 className="text-4xl sm:text-5xl md:text-5xl font-extrabold leading-tight text-lora">
