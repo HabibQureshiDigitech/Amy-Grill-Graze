@@ -257,7 +257,7 @@ function MenuPage() {
 
             <h2 className="text-2xl lg:text-[43px] font-semibold text-[#000000] font-lora italic mb-6">
 
-              Comfrot Soups
+              Comfort Soups
             </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
