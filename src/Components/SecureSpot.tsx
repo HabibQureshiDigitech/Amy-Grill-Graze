@@ -1,4 +1,9 @@
 import { FaRegCirclePlay } from "react-icons/fa6";
+import ReCAPTCHA from "react-google-recaptcha";
+
+function onChange(value: any) {
+  console.log("Captcha value:", value);
+}
 
 
 const SecureSpot = () => {
@@ -91,6 +96,14 @@ const SecureSpot = () => {
               className="w-full p-2  border-b border-gray-300 focus:outline-none text-[#9F9F9F] placeholder:text-[#9F9F9F] custom-date-time font-public"
             />
           </div>
+
+            <div className="w-full  max-w-xs md:max-w-sm scale-[0.75] origin-left sm:scale-100 sm:origin-center">
+                <ReCAPTCHA
+                  sitekey="6LfLl0QrAAAAANNXga01CDHqHfeKNwV8ki56msKI"
+                  onChange={onChange}
+                  theme="dark"
+                />
+              </div>
 
           <div className="text-center"> 
           <button
