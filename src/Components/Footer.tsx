@@ -71,8 +71,8 @@ const Footer = () => {
 
         <div className="lg:text-end">
           
-           <p className="mb-2 text-[14px] font-normal lg:me-20   font-public">Email</p>
-          <p className="text-[#9F9F9F] text-[14px] font-normal font-public">email@gmail.com</p>
+           <p className="mb-2 text-[14px] font-normal lg:me-32   font-public">Email</p>
+          <p className="text-[#9F9F9F] text-[14px] font-normal lg:me-12 font-public">email@gmail.com</p>
         </div>
         
 
